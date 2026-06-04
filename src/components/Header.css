@@ -5,10 +5,11 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; 
+
   padding: 10px 20px;
   background-color: #333;
-  color: white;
+  color: rgb(86, 86, 86);
   height: 80px;
   padding: 0 20px;
   position: fixed;
