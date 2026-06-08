@@ -1,11 +1,11 @@
-import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
+import { HeroSection } from "./Hero"
 import "./HomePage.css";
 
 export function HomePage() {
   return (
     <>
-      <Header />
+      <HeroSection />
       <Footer />
     </>
   );
