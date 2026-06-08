@@ -24,15 +24,15 @@ export function Footer() {
             <p>KZN’s leading solution provider for precision manufacturing.</p>
             <div className="social-icons">
               <a href="https://facebook.com" target="_blank" rel="noreferrer">
-                <FontAwesomeIcon icon={faFacebook} />
+                <FontAwesomeIcon className="icon" icon={faFacebook} />
               </a>
 
               <a href="https://instagram.com" target="_blank" rel="noreferrer">
-                <FontAwesomeIcon icon={faInstagram} />
+                <FontAwesomeIcon className="icon" icon={faInstagram} />
               </a>
 
               <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-                <FontAwesomeIcon icon={faLinkedin} />
+                <FontAwesomeIcon className="icon" icon={faLinkedin} />
               </a>
 
               <a
@@ -40,7 +40,7 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <FontAwesomeIcon icon={faWhatsapp} />
+                <FontAwesomeIcon className="icon" icon={faWhatsapp} />
               </a>
             </div>
           </div>
@@ -69,29 +69,29 @@ export function Footer() {
           <div className="footer-content">
             <h4>CONTACT</h4>
             <div className="contact-item">
-              <FontAwesomeIcon icon={faPhone} />
+              <FontAwesomeIcon className="icon" icon={faPhone} />
               <span>+27 82 123 4567</span>
             </div>
             <div className="contact-item">
-              <FontAwesomeIcon icon={faEnvelope} />
+              <FontAwesomeIcon className="icon" icon={faEnvelope} />
               <span>myles@usedmachinetools.co.za</span>
             </div>
             <div className="contact-item">
-              <FontAwesomeIcon icon={faLocationDot} />
+              <FontAwesomeIcon className="icon" icon={faLocationDot} />
               <span>4 Reed Place, Marlmead, Pinetown, 3610</span>
             </div>
           </div>
         </div>
         <div class="copy">
           <div class="company">
-            <p>
+            <small>
               © 2026 Myles Crosthwaite Sales and Services CC | All right
               reserved
-            </p>
+            </small>
           </div>
           <div class="companydocs">
-            <p>
-              Powered by
+            <small>
+              Powered by <span> </span>
               <a
                 href="https://venturetechnologies.co"
                 target="_blank"
@@ -99,7 +99,7 @@ export function Footer() {
               >
                 Venture
               </a>
-            </p>
+            </small>
           </div>
         </div>
       </div>

@@ -34,7 +34,7 @@ h3{
 
 h4{
   font-size: clamp(1.4rem, 1.8vw, 1.8rem);
-  color: rgb(0, 0, 0);
+  color: #D12126;
 }
 
 p{
@@ -47,6 +47,11 @@ p{
 a {
   text-decoration: none;
   color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #D12126;
 }
 
 .logo{
