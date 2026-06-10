@@ -38,6 +38,14 @@
   color: #848484;  
   background-color: transparent;
   border: 1px solid #848484;
+  transition: all 0.3s ease;
+}
+
+.admin-button:hover {
+  color: #ffffff;  
+  border: 1px solid #ffffff;
+  scale: 1.025;
+  background-color: transparent;
 }
 
 .mobile-menu {

@@ -77,6 +77,18 @@ export function HeroSection(){
             <a href="https://www.wdhearn.co.za">
               <img src={wdhearnLogo} alt="WD Hearn" />
             </a>
+            <a href="https://www.wdhearn.co.za">
+              <img src={leadLogo} alt="Lead" />
+            </a>
+            <a href="https://www.wdhearn.co.za">
+              <img src={wdhearnLogo} alt="WD Hearn" />
+            </a>
+            <a href="https://www.wdhearn.co.za">
+              <img src={leadLogo} alt="Lead" />
+            </a>
+            <a href="https://www.wdhearn.co.za">
+              <img src={wdhearnLogo} alt="WD Hearn" />
+            </a>
           </div>
         </div>
       </div>
