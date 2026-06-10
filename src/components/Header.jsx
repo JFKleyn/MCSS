@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -6,7 +6,19 @@ import Logo from "../assets/logo.png";
 import "./Header.css";
 
 export function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      setScrolled(window.scrollY > 50);
+    }
+
+     window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   function toggleMenu() {
     setMenuOpen(!menuOpen);
@@ -25,7 +37,7 @@ export function Header() {
 
   return (
     <>
-      <div className="header">
+      <div className={`header ${scrolled ? "scrolled" : ""}`}>
         <img src={Logo} alt="Logo" className="logo" />
         <div className="navigation">
           <Link to="/">Home</Link>
