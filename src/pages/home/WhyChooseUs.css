@@ -1,0 +1,136 @@
+.why-container {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.why-stats{
+  background-color: #D12126;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  border-radius: 10px;
+}
+
+.why-icon{
+  height: 30px;
+  width: 30px;
+  fill: white;
+}
+
+.why-stats-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.svg-container{
+  background-color: rgba(255, 255, 255, 0.20);
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.why-stats h2{
+  color: white;
+}
+
+.why-stats small{
+  color: rgb(230, 230, 230);
+  text-align: center;
+}
+
+.why-description{
+  background-color: #FFF0F0;
+  border-radius: 10px;
+  padding: 20px;
+
+}
+
+.why-description h4{
+  color: black;
+}
+
+.why-description p{
+  text-align: left;
+}
+
+.red{
+  color: #D12126;
+}
+
+.leading-partners{
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.leading-partners-header{
+  background-color: #D12126;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.leading-partners-header h4{
+  color: rgb(255, 255, 255);
+}
+
+.leading-partners-header p{
+  color: rgb(137, 137, 137);
+  text-align: left;
+  font-weight: 300;
+}
+
+.leading-partners-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #FFF0F0;
+}
+
+.partner-logo {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
+
+.official-agents{
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.official-agents-header{
+  background-color: #000000;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.official-agents-header h4{
+  color: rgb(255, 255, 255);
+}
+
+.official-agents-header p{
+  color: rgb(137, 137, 137);
+  text-align: left;
+  font-weight: 300;
+}
+
+.official-agents-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #FFF0F0;
+}
