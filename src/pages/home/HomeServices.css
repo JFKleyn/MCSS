@@ -1,0 +1,138 @@
+.service-section{
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.service-image{
+  width: 100%;
+  height: auto;
+}
+
+.service-icon{
+  height: 24px;
+  width: 24px;
+  fill: #D12126;
+}
+
+.design-icon{
+  height: 30px;
+  width: 30px;
+  fill: #D12126;
+}
+
+.svg-containers{
+  background-color: rgba(255, 0, 0, 0.229);
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-containers{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.service-container{
+  border-bottom: 5px solid #D12126;
+  padding: 20px;
+  background-color: #FFF0F0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 600px;
+}
+
+.service-container-text{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.service-container-text-text{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.service-container-text p{
+  text-align: left;
+}
+
+.find-button-container {
+  padding-top: 20px;
+  margin-top: 10px;
+}
+
+
+.find-button-container button{
+  display: flex;
+  width: 100%;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.find-button-container button p{
+  color: white;
+  font-size: 16px;
+}
+
+.find-button-container button:hover{
+  scale: 1.05;
+  background-color: #951d21;
+}
+
+
+@media (min-width: 1024px){
+  .service-section{
+    padding: 60px 80px;
+  }
+
+  .service-containers{
+    display: grid;
+  }
+
+  .service-container{
+    padding: 32px;
+    grid-template-columns: 1fr 1fr;
+    max-width: 6000px;
+  }
+
+  .service-container-text{
+    justify-content: space-evenly;
+    padding: 40px;
+  }
+
+  .service-icon{
+    height: 30px;
+    width: 30px;
+    fill: #D12126;
+  }
+
+  .design-icon{
+    height: 40px;
+    width: 40px;
+    fill: #D12126;
+  }
+
+  .svg-containers{
+    background-color: rgba(255, 0, 0, 0.229);
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
