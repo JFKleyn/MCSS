@@ -3,6 +3,7 @@ import { HeroSection } from "./Hero"
 import { WhyChooseUs } from "./WhyChooseUs";
 import { HomeProducts } from "./HomeProducts";
 import { HomeServices } from "./HomeServices";
+import { HomeContact } from "./HomeContact";
 import "./HomePage.css";
 
 export function HomePage() {
@@ -12,6 +13,7 @@ export function HomePage() {
       <WhyChooseUs />
       <HomeProducts />
       <HomeServices />
+      <HomeContact />
       <Footer />
     </>
   );
