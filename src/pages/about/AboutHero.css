@@ -1,0 +1,34 @@
+.about-hero {
+  height: 40vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center ;
+  overflow: hidden;
+  padding-left: 40px;
+  gap: 10px;
+}
+
+.about-hero-headline{
+  padding: 10px ;
+  border-left: 3px solid #D12126;
+  transform: translateY(20px);
+}
+
+.about-hero h1 {
+  text-align: left;
+  transform: translateY(20px);
+}
+
+.about-hero p {
+  text-align: left;
+  color: #D12126;
+}
+
+@media (min-width: 1024px){
+  .about-hero{
+    padding: 60px 80px;
+  }
+  
+
+}
