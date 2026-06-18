@@ -1,12 +1,13 @@
 import { Footer } from "../../components/Footer";
-import "./AboutPage.css";
 import { AboutHero } from "./AboutHero";
+import { OurStory } from "./OurStory";
+import "./AboutPage.css";
 
 export function AboutPage() {
   return (
     <>
       <AboutHero />
-      
+      <OurStory />
       <Footer />
     </>
   );

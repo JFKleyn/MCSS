@@ -1,0 +1,26 @@
+.our-story-section{
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.team-photo{
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.team-photo-container{
+  display: flex;
+  justify-content: center;
+}
+
+
+@media (min-width: 1024px){
+  .our-story-section{
+    padding: 60px 80px;
+  }
+  
+
+}

@@ -1,0 +1,151 @@
+.timeline-section {
+  position: relative;
+  padding: 60px 20px 60px 42px;
+}
+
+/* Background Line */
+
+.timeline-line-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 22px;
+  width: 2px;
+  background-color: #e4e4e4;
+}
+
+/* Animated Line */
+
+.timeline-line-active {
+  position: absolute;
+  top: 0;
+  left: 22px;
+  width: 2px;
+  background-color: #dc1f2e;
+  transition: height 0.1s linear;
+}
+
+/* Timeline Item */
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 70px;
+
+  opacity: 0;
+  transform: translateX(40px);
+
+  transition: all 0.7s ease;
+}
+
+.timeline-item.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Dot */
+
+.timeline-dot {
+  position: absolute;
+
+  top: 30px;
+  left: -31px;
+
+  width: 22px;
+  height: 22px;
+
+  background-color: #dc1f2e;
+
+  border-radius: 50%;
+
+  border: 4px solid white;
+
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+
+  z-index: 5;
+}
+
+/* Card */
+
+.timeline-card {
+  background-color: white;
+
+  padding: 28px;
+
+  border: 2px solid #dc1f2e;
+
+  border-radius: 8px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.timeline-card span {
+  display: inline-block;
+
+  padding: 8px 14px;
+
+  background-color: #dc1f2e;
+
+  color: white;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  border-radius: 20px;
+
+  margin-bottom: 16px;
+}
+
+.timeline-card h3 {
+  margin-bottom: 16px;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.timeline-card p {
+  line-height: 1.8;
+}
+
+/* ========================= */
+/* Desktop */
+/* ========================= */
+
+@media (min-width: 768px) {
+  .timeline-section {
+    padding: 80px 8%;
+  }
+
+  .timeline-line-bg,
+  .timeline-line-active {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    width: 50%;
+    margin-bottom: 90px;
+  }
+
+  .timeline-item.left {
+    left: 0;
+
+    padding-right: 60px;
+
+    text-align: right;
+  }
+
+  .timeline-item.right {
+    left: 50%;
+
+    padding-left: 60px;
+  }
+
+  .timeline-item.left .timeline-dot {
+    left: auto;
+    right: -11px;
+  }
+
+  .timeline-item.right .timeline-dot {
+    left: -11px;
+  }
+}
