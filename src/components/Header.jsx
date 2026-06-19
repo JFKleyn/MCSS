@@ -77,8 +77,8 @@ export function Header() {
 
           <div className={`mobile-submenu ${machinesOpen ? "open" : ""}`}>
             <div className="submenu-spacer"></div>
-            <Link to="/machines/new">New Machines</Link>
-            <Link to="/machines/used">Used Machines</Link>
+            <a href="https://www.wdhearn.co.za">New Machines</a>
+            <Link to="/machines">Used Machines</Link>
           </div>
         </div>
         <Link to="/tools">Niche Tooling</Link>

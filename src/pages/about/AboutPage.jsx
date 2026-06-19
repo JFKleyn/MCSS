@@ -4,7 +4,6 @@ import { OurStory } from "./OurStory";
 import { OurTeam } from "./OurTeam"
 import { OurCommitment } from "./OurCommitment"
 import { Footer2 } from "./Footer2"
-import "./AboutPage.css";
 
 export function AboutPage() {
   return (
