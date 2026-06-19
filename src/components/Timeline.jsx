@@ -6,33 +6,36 @@ export function Timeline() {
   const [lineHeight, setLineHeight] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const timeline = timelineRef.current;
+  let ticking = false;
 
-      if (!timeline) return;
+  const handleScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const timeline = timelineRef.current;
+        if (!timeline) return;
 
-      const rect = timeline.getBoundingClientRect();
-      const timelineHeight = timeline.offsetHeight;
-      const viewportCenter = window.innerHeight * 0.5;
+        const rect = timeline.getBoundingClientRect();
+        const viewportCenter = window.innerHeight * 0.55;
 
-      const progress = viewportCenter - rect.top;
+        const progress = viewportCenter - rect.top;
+        const percentage = Math.max(
+          0,
+          Math.min(progress / timeline.offsetHeight, 1)
+        );
 
-      const newHeight = Math.max(
-        0,
-        Math.min(progress, timelineHeight)
-      );
+        setLineHeight(percentage);
+        ticking = false;
+      });
 
-      setLineHeight(newHeight);
-    };
+      ticking = true;
+    }
+  };
 
-    handleScroll();
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  handleScroll();
 
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
   useEffect(() => {
   const items = document.querySelectorAll(".timeline-item");
@@ -68,7 +71,7 @@ export function Timeline() {
 
       <div
         className="timeline-line-active"
-        style={{ height: `${lineHeight}px` }}
+        style={{ transform: `scaleY(${lineHeight})` }}
       ></div>
 
       <div className="timeline-item left">
