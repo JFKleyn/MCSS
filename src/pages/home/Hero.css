@@ -76,7 +76,7 @@
 .slide-track {
   display: flex;
   width: fit-content;
-  animation: scroll 40s linear infinite;
+  animation: scroll 25s linear infinite;
 }
 
 .slide-track img {

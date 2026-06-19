@@ -36,6 +36,11 @@ h4{
   font-size: clamp(1.3rem, 1.8vw, 1.8rem);
 }
 
+h5{
+  font-size: clamp(1.15rem, 1.5vw, 1.6rem);
+  font-weight: 600;
+}
+
 p{
   font-size: clamp(1rem, 1.2vw, 1.4rem);
   text-align: center;
