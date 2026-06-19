@@ -146,3 +146,100 @@ export function ClockIcon2() {
     </svg>
   );
 }
+
+export function ShieldIcon() {
+  return (
+    <svg
+      className="commitmentsvg"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 30 37"
+      fill="none"
+    >
+      <path
+        d="M28.3333 20.0006C28.3333 28.3339 22.5 32.5006 15.5667 34.9173C15.2036 35.0403 14.8092 35.0344 14.45 34.9006C7.5 32.5006 1.66667 28.3339 1.66667 20.0006V8.33392C1.66667 7.89189 1.84227 7.46797 2.15483 7.15541C2.46739 6.84285 2.89131 6.66725 3.33334 6.66725C6.66667 6.66725 10.8333 4.66725 13.7333 2.13392C14.0864 1.83225 14.5356 1.6665 15 1.6665C15.4644 1.6665 15.9136 1.83225 16.2667 2.13392C19.1833 4.68392 23.3333 6.66725 26.6667 6.66725C27.1087 6.66725 27.5326 6.84285 27.8452 7.15541C28.1577 7.46797 28.3333 7.89189 28.3333 8.33392V20.0006Z"
+        stroke="white"
+        stroke-width="3.33333"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function RibbonIcon() {
+  return (
+    <svg
+      className="commitmentsvg"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 40 40"
+      fill="none"
+    >
+      <path
+        d="M25.795 21.4834L28.32 35.6934C28.3483 35.8607 28.3248 36.0327 28.2527 36.1863C28.1806 36.3399 28.0633 36.4679 27.9166 36.5531C27.7698 36.6382 27.6005 36.6766 27.4314 36.6629C27.2622 36.6493 27.1012 36.5843 26.97 36.4767L21.0033 31.9984C20.7153 31.7832 20.3654 31.6669 20.0058 31.6669C19.6463 31.6669 19.2964 31.7832 19.0083 31.9984L13.0317 36.4751C12.9005 36.5825 12.7398 36.6473 12.5708 36.661C12.4019 36.6746 12.2328 36.6364 12.0861 36.5515C11.9394 36.4666 11.8221 36.3389 11.7499 36.1856C11.6776 36.0323 11.6538 35.8606 11.6817 35.6934L14.205 21.4834"
+        stroke="white"
+        stroke-width="3.33333"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M20 23.3335C25.5228 23.3335 30 18.8563 30 13.3335C30 7.81065 25.5228 3.3335 20 3.3335C14.4772 3.3335 10 7.81065 10 13.3335C10 18.8563 14.4772 23.3335 20 23.3335Z"
+        stroke="white"
+        stroke-width="3.33333"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function TickIcon() {
+  return (
+    <svg
+      className="commitmentsvg"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 40 40"
+      fill="none"
+    >
+      <path
+        d="M20 36.6668C29.2047 36.6668 36.6666 29.2049 36.6666 20.0002C36.6666 10.7954 29.2047 3.3335 20 3.3335C10.7952 3.3335 3.33331 10.7954 3.33331 20.0002C3.33331 29.2049 10.7952 36.6668 20 36.6668Z"
+        stroke="white"
+        stroke-width="3.33333"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M15 19.9998L18.3333 23.3332L25 16.6665"
+        stroke="white"
+        stroke-width="3.33333"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function UptrendIcon() {
+  return (
+    <svg
+      className="commitmentsvg"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 40 40"
+      fill="none"
+    >
+      <path
+        d="M36.6667 11.6665L22.5 25.8332L14.1667 17.4998L3.33337 28.3332"
+        stroke="white"
+        stroke-width="3.33333"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M26.6666 11.6665H36.6666V21.6665"
+        stroke="white"
+        stroke-width="3.33333"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+}

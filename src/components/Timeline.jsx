@@ -45,7 +45,7 @@ export function Timeline() {
   const observerOptions = isMobile
     ? {
         threshold: 0.25,
-        rootMargin: "0px 0px -200px 0px",
+        rootMargin: "0px 0px -280px 0px",
       }
     : {
         threshold: 0.35,
