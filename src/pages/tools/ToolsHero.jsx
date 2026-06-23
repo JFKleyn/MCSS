@@ -1,5 +1,4 @@
 import { Header } from "../../components/Header";
-import { Link } from "react-router";
 import cAndM from "../../assets/CuttingAndMachining.png"
 import nicheLogo from "../../assets/NicheSA.png"
 import "./ToolsHero.css"

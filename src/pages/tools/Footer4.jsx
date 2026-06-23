@@ -1,8 +1,8 @@
-export function Footer3(){
+export function Footer4(){
   return(
     <div className="footer2-section">
-      <h2>WE SOURCE SPECIALIZED EQUIPMENT</h2>
-      <p>Our network spans South Africa and neighboring countries. If you need specific machinery not listed, we'll locate it for you.</p>
+      <h2>CAN'T FIND WHAT YOU'RE LOOKING FOR?</h2>
+      <p>Our team of specialists can help you source the exact tooling you need. Contact us for custom orders, bulk pricing, or technical consultation.</p>
       <div className="footer2-buttons">
         <button className="footer2-btn1">
           <h5>CONTACT US NOW</h5>
