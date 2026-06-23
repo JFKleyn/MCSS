@@ -1,0 +1,11 @@
+.niche{
+  height: 60vh;
+}
+
+.niche h1{
+  font-size: clamp(2.8rem, 5vw, 4.5rem)
+}
+
+.niche small{
+  color: #D12126;
+}

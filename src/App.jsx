@@ -2,8 +2,9 @@ import { HomePage } from "./pages/home/HomePage";
 import { AboutPage } from "./pages/about/AboutPage";
 import { Routes, Route } from "react-router-dom";
 import { ScrollToTop } from "./components/ScrollToTop";
-import "./App.css";
 import { MachinePage } from "./pages/machines/MachinePage";
+import { ToolsPage } from "./pages/tools/ToolsPage";
+import "./App.css";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path="about" element={<AboutPage />} />
         <Route path="machines" element={<MachinePage />} />
+        <Route path="tools" element={<ToolsPage />} />
       </Routes>
     </>
   );
