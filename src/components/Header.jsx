@@ -6,7 +6,7 @@ import Logo from "../assets/logo.png";
 import "./Header.css";
 
 export function Header() {
-  const [menuOpen, setMenuOpen] = useState(false); 
+  const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ export function Header() {
       setScrolled(window.scrollY > 50);
     }
 
-     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
@@ -42,7 +42,16 @@ export function Header() {
         <div className="navigation">
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
-          <Link to="/machines">Machines</Link>
+          <div className="desktop-dropdown">
+            <button type="button" className="desktop-dropdown-title">Machines▾</button>
+
+            <div className="desktop-submenu">
+              <a href="https://www.wdhearn.co.za" target="_blank">
+                New Machines
+              </a>
+              <Link to="/machines">Used Machines</Link>
+            </div>
+          </div>
           <Link to="/tools">Niche Tooling</Link>
           <Link to="/services">Services</Link>
           <Link to="/contact">Contact</Link>
@@ -68,10 +77,7 @@ export function Header() {
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <div>
-          <div
-            className="mobile-dropdown-title"
-            onClick={toggleMachines}
-          >
+          <div className="mobile-dropdown-title" onClick={toggleMachines}>
             Machines▾
           </div>
 
