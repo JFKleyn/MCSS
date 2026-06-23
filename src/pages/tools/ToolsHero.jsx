@@ -21,14 +21,6 @@ export function ToolsHero(){
         <p>
           Professional-grade industrial tooling solutions from South Africa's leading precision equipment supplier
         </p>
-        <div className="hero-buttons">
-            <Link to="/contact">
-              <button>CONTACT US</button>
-            </Link>
-            <Link to="/admin">
-              <button className="product-button">OUR PRODUCTS</button>
-            </Link>
-        </div>
       </div>
       
       <div className="partners-banner">
