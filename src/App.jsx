@@ -6,6 +6,7 @@ import { MachinePage } from "./pages/machines/MachinePage";
 import { ToolsPage } from "./pages/tools/ToolsPage";
 import "./App.css";
 import { ContactPage } from "./pages/contact/ContactPage";
+import { ServicesPage } from "./pages/services/ServicesPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="machines" element={<MachinePage />} />
         <Route path="tools" element={<ToolsPage />} />
         <Route path="contact" element={<ContactPage />} />
+        <Route path="services" element={<ServicesPage />} />
       </Routes>
     </>
   );
