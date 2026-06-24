@@ -28,7 +28,7 @@ export function HomeServices() {
           </p>
           </div>
           <div className="find-button-container">
-            <Link to="/machines">
+            <Link to="/services">
               <button>
                 <p>FIND OUT MORE</p>
                 <ArrowIcon />
@@ -51,7 +51,7 @@ export function HomeServices() {
           </p>
           </div>
           <div className="find-button-container">
-            <Link to="/machines">
+            <Link to="/services">
               <button>
                 <p>FIND OUT MORE</p>
                 <ArrowIcon />
@@ -75,7 +75,7 @@ export function HomeServices() {
           </p>
           </div>
           <div className="find-button-container">
-            <Link to="/machines">
+            <Link to="/services">
               <button>
                 <p>FIND OUT MORE</p>
                 <ArrowIcon />
@@ -98,7 +98,7 @@ export function HomeServices() {
           </p>
           </div>
           <div className="find-button-container">
-            <Link to="/machines">
+            <Link to="/services">
               <button>
                 <p>FIND OUT MORE</p>
                 <ArrowIcon />
