@@ -82,14 +82,14 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div class="copy">
-          <div class="company">
+        <div className="copy">
+          <div className="company">
             <small>
               © 2026 Myles Crosthwaite Sales and Services CC | All right
               reserved
             </small>
           </div>
-          <div class="companydocs">
+          <div className="companydocs">
             <small>
               Powered by <span> </span>
               <a

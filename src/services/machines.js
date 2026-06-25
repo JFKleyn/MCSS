@@ -29,3 +29,91 @@ export async function getMachines() {
 
   return data;
 }
+
+export async function createMachine(machine) {
+  const { data, error } = await supabase
+    .from("machines")
+    .insert(machine)
+    .select()
+    .single();
+
+  if (error) {
+    throw error;
+  }
+
+  return data;
+}
+
+export async function getAllMachines() {
+  const { data, error } = await supabase
+    .from("machines")
+    .select(`
+      *,
+      machine_specs (
+        id
+      ),
+      machine_images (
+        id,
+        machine_id,
+        image_url,
+        alt_text,
+        display_order
+      )
+    `)
+    .order("created_at", { ascending: false });
+
+  if (error) throw error;
+
+  console.log("getAllMachines data:", data);
+
+  return data;
+}
+
+export async function deleteMachine(machineId) {
+  const { error } = await supabase
+    .from("machines")
+    .delete()
+    .eq("id", machineId);
+
+  if (error) {
+    throw error;
+  }
+}
+
+export async function createMachineSpecs(machineId, specs) {
+  const specsToInsert = specs
+    .filter((spec) => spec.label.trim() !== "" && spec.value.trim() !== "")
+    .map((spec, index) => ({
+      machine_id: machineId,
+      label: spec.label,
+      value: spec.value,
+      display_order: index + 1,
+    }));
+
+  if (specsToInsert.length === 0) return;
+
+  const { error } = await supabase
+    .from("machine_specs")
+    .insert(specsToInsert);
+
+  if (error) {
+    throw error;
+  }
+}
+
+export async function createMachineImages(machineId, imageUrls) {
+  const imagesToInsert = imageUrls.map((imageUrl, index) => ({
+    machine_id: machineId,
+    image_url: imageUrl,
+    alt_text: null,
+    display_order: index + 1,
+  }));
+
+  if (imagesToInsert.length === 0) return;
+
+  const { error } = await supabase
+    .from("machine_images")
+    .insert(imagesToInsert);
+
+  if (error) throw error;
+}

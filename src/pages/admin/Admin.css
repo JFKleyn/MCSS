@@ -12,51 +12,142 @@
 .admin-header {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
   margin-bottom: 24px;
 }
 
 .admin-header p {
   color: #d71920;
   font-weight: 700;
-  letter-spacing: 1px;
   font-size: 13px;
+  letter-spacing: 1px;
 }
 
 .admin-header h1 {
-  font-size: 30px;
+  font-size: 32px;
   color: #111;
 }
 
 .admin-add-button {
-  border: none;
+  display: inline-block;
+  width: fit-content;
+  text-decoration: none;
   background: #d71920;
-  color: #fff;
+  color: white;
   padding: 14px 22px;
   border-radius: 8px;
   font-weight: 700;
-  cursor: pointer;
-}
-
-.admin-logout-button {
-  border: none;
-  background: #d71920;
-  color: #fff;
-  padding: 14px 22px;
-  border-radius: 8px;
-  font-weight: 700;
-  cursor: pointer;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 10001;
 }
 
 .admin-card {
-  background: #fff;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.admin-logout-button {
+  margin-top: 20px;
+  border: none;
+  background: #111;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.admin-machine-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.admin-machine-row {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
-  padding: 24px;
+  background: #fff;
+}
+
+.admin-machine-row h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.admin-machine-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #6b7280;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.admin-actions button {
+  border: none;
+  background: #111;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.admin-actions .delete-button {
+  background: #d71920;
+}
+
+.admin-machine-thumb {
+  width: 100%;
+  height: 170px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #eee;
+  display: grid;
+  place-items: center;
+  color: #777;
+}
+
+.admin-machine-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-machine-counts {
+  display: flex;
+  gap: 10px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+
+@media (min-width: 800px) {
+  .admin-machine-row {
+    grid-template-columns: 110px 1fr 150px 160px;
+    align-items: center;
+  }
+
+  .admin-machine-thumb {
+    width: 110px;
+    height: 80px;
+  }
+
+  .admin-machine-counts {
+    flex-direction: column;
+  }
+
+  .admin-machine-meta {
+    align-items: flex-start;
+  }
+
+  .admin-actions {
+    justify-content: flex-end;
+  }
 }
 
 @media (min-width: 768px) {

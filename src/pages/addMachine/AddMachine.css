@@ -121,13 +121,40 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
   margin-top: 14px;
+  margin-bottom: 24px;
 }
 
 .image-preview {
+  position: relative;
   height: 140px;
   border-radius: 10px;
   overflow: hidden;
   background: #eee;
+}
+
+.remove-image-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  min-width: unset;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.remove-image-button:hover {
+  background: #d71920;
 }
 
 .image-preview img {
