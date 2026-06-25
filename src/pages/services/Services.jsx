@@ -1,10 +1,8 @@
-import { Link } from "react-router";
 import training from "../../assets/Training.png";
 import servicing from "../../assets/Servicing.png";
 import turnkey from "../../assets/Turnkey.png";
 import design from "../../assets/Design.png";
 import { TeachIcon, DesignIcon2, WrenchIcon } from "../../components/SVGIcons";
-import { ArrowIcon } from "../../components/SVGIcons";
 import "./Services.css";
 
 export function Services() {

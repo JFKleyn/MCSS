@@ -60,7 +60,7 @@ export function Header() {
           <Link to="/contact">
             <button>GET A QUOTE</button>
           </Link>
-          <Link to="/admin">
+          <Link to="/login">
             <button className="admin-button">ADMIN LOGIN</button>
           </Link>
         </div>
@@ -90,7 +90,7 @@ export function Header() {
         <Link to="/tools">Niche Tooling</Link>
         <Link to="/services">Services</Link>
         <Link to="/contact">Contact</Link>
-        <Link to="/admin">Admin Login</Link>
+        <Link to="/login">Admin Login</Link>
       </div>
     </>
   );
