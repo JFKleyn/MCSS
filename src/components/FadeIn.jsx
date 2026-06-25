@@ -13,7 +13,7 @@ export function FadeIn({ children, className = "" }) {
         }
       },
       {
-        threshold: 0.6,
+        threshold: 0.3,
       }
     );
 

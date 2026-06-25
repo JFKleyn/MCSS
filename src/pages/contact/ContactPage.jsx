@@ -2,6 +2,7 @@ import { ContactForm } from "../../components/ContactForm";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { PhoneIcon, EmailIcon, ClockIcon2 } from "../../components/SVGIcons";
+import { FadeIn } from "../../components/FadeIn";
 import "./ContactPage.css"
 
 
@@ -17,6 +18,7 @@ export function ContactPage() {
     </div>
     <div className="contact-bodyy">
       <ContactForm />
+      <FadeIn>
       <div className="contact-details">
         <div className="contact-details-text">
           <div className="contact-details-item">
@@ -56,6 +58,7 @@ export function ContactPage() {
           ></iframe>
         </div>
       </div>
+      </FadeIn>
     </div>
     </div>
     <Footer />
