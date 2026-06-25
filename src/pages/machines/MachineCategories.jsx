@@ -4,6 +4,7 @@ import fabrication from "../../assets/Fabrication.png"
 import conventional from "../../assets/Conventional.png"
 import specialized from "../../assets/Specialized.png"
 import "./MachineCategories.css";
+import { Link } from "react-router-dom";
 
 export function MachineCategories(){
   return(
@@ -23,10 +24,12 @@ export function MachineCategories(){
             <p><span>•</span> Machining Centres</p>
             <p><span>•</span> CNC Grinding Machines</p>
           </div>
-          <button>
-            <p>VIEW AVAILABLE MACHINES</p>
-            <ArrowIcon />
-          </button>
+          <Link to={"/machine-listing"}>
+            <button>
+              <p>VIEW AVAILABLE MACHINES</p>
+              <ArrowIcon />
+            </button>
+          </Link>
         </div>
       </div>
       <div className="machine-category">
@@ -43,10 +46,12 @@ export function MachineCategories(){
             <p><span>•</span> Laser Cutting Machines</p>
             <p><span>•</span> Plasma & Waterjet Cutting</p>
           </div>
-          <button>
-            <p>VIEW AVAILABLE MACHINES</p>
-            <ArrowIcon />
-          </button>
+          <Link to={"/machine-listing"}>
+            <button>
+              <p>VIEW AVAILABLE MACHINES</p>
+              <ArrowIcon />
+            </button>
+          </Link>
         </div>
       </div>
       <div className="machine-category">
@@ -64,10 +69,12 @@ export function MachineCategories(){
             <p><span>•</span> Conventional Lathese</p>
             <p><span>•</span> Conventional Milling Machines</p>
           </div>
-          <button>
-            <p>VIEW AVAILABLE MACHINES</p>
-            <ArrowIcon />
-          </button>
+          <Link to={"/machine-listing"}>
+            <button>
+              <p>VIEW AVAILABLE MACHINES</p>
+              <ArrowIcon />
+            </button>
+          </Link>
         </div>
       </div>
       <div className="machine-category">
@@ -85,10 +92,12 @@ export function MachineCategories(){
             <p><span>•</span> Injection Moulding Machines</p>
             <p><span>•</span> CNC Grinding Machines</p>
           </div>
-          <button>
-            <p>VIEW AVAILABLE MACHINES</p>
-            <ArrowIcon />
-          </button>
+          <Link to={"/machine-listing"}>
+            <button>
+              <p>VIEW AVAILABLE MACHINES</p>
+              <ArrowIcon />
+            </button>
+          </Link>
         </div>
       </div>
     </div>

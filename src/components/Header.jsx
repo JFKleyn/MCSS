@@ -49,7 +49,7 @@ export function Header() {
               <a href="https://www.wdhearn.co.za" target="_blank">
                 New Machines
               </a>
-              <Link to="/machines">Used Machines</Link>
+              <Link to="/machine-listing">Used Machines</Link>
             </div>
           </div>
           <Link to="/tools">Niche Tooling</Link>
@@ -84,7 +84,7 @@ export function Header() {
           <div className={`mobile-submenu ${machinesOpen ? "open" : ""}`}>
             <div className="submenu-spacer"></div>
             <a href="https://www.wdhearn.co.za">New Machines</a>
-            <Link to="/machines">Used Machines</Link>
+            <Link to="/machine-listing">Used Machines</Link>
           </div>
         </div>
         <Link to="/tools">Niche Tooling</Link>

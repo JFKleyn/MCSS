@@ -3,25 +3,33 @@ import { supabase } from "./supabase";
 export async function getMachines() {
   const { data, error } = await supabase
     .from("machines")
-    .select(`
-      *,
-      machine_specs (
-        id,
-        label,
-        value,
-        sort_order
-      ),
-      machine_images (
-        id,
-        image_url,
-        alt_text,
-        sort_order
-      )
-    `)
+    .select(
+      `
+  *,
+  machine_specs (
+    id,
+    label,
+    value,
+    display_order
+  ),
+  machine_images (
+    id,
+    image_url,
+    alt_text,
+    display_order
+  )
+`,
+    )
     .eq("status", "available")
     .order("created_at", { ascending: false })
-    .order("display_order", { foreignTable: "machine_specs", ascending: true })
-.order("display_order", { foreignTable: "machine_images", ascending: true })
+    .order("display_order", {
+      foreignTable: "machine_specs",
+      ascending: true,
+    })
+    .order("display_order", {
+      foreignTable: "machine_images",
+      ascending: true,
+    });
 
   if (error) {
     throw error;
@@ -47,7 +55,8 @@ export async function createMachine(machine) {
 export async function getAllMachines() {
   const { data, error } = await supabase
     .from("machines")
-    .select(`
+    .select(
+      `
       *,
       machine_specs (
         id
@@ -59,7 +68,8 @@ export async function getAllMachines() {
         alt_text,
         display_order
       )
-    `)
+    `,
+    )
     .order("created_at", { ascending: false });
 
   if (error) throw error;
@@ -92,9 +102,7 @@ export async function createMachineSpecs(machineId, specs) {
 
   if (specsToInsert.length === 0) return;
 
-  const { error } = await supabase
-    .from("machine_specs")
-    .insert(specsToInsert);
+  const { error } = await supabase.from("machine_specs").insert(specsToInsert);
 
   if (error) {
     throw error;
@@ -121,7 +129,8 @@ export async function createMachineImages(machineId, imageUrls) {
 export async function getMachine(machineId) {
   const { data, error } = await supabase
     .from("machines")
-    .select(`
+    .select(
+      `
       *,
       machine_specs (
         id,
@@ -135,7 +144,8 @@ export async function getMachine(machineId) {
         alt_text,
         display_order
       )
-    `)
+    `,
+    )
     .eq("id", machineId)
     .single();
 

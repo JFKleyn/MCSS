@@ -51,6 +51,10 @@
   justify-content: center;
 }
 
+.category-info button{
+  width: 100%;
+}
+
 @media (min-width: 780px){
   .machine-category{
     display: grid;

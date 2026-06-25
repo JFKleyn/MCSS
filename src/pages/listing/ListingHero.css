@@ -1,0 +1,38 @@
+.machine-hero {
+  height: 50vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center ;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 40px;
+  background: linear-gradient(to right,black,#150203, black);
+}
+
+.machine-hero-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+  border-left: 3px solid #D12126;
+  justify-content: center;
+  transform: translateY(20px);
+}
+
+.machine-hero h1 {
+  text-align: left;
+}
+
+.machine-hero p {
+  text-align: left;
+  color: #b9b9b9;
+  font-weight: 200;
+  max-width: 1000px;
+}
+
+@media (min-width: 1024px){
+  .machine-hero{
+    padding: 60px 80px;
+  }
+}
