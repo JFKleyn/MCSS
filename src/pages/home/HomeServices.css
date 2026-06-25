@@ -47,6 +47,7 @@
   grid-template-columns: 1fr;
   gap: 24px;
   max-width: 600px;
+  box-shadow: 0 6px 10px rgb(0, 0, 0, 0.2);
 }
 
 .service-container-text{

@@ -1,7 +1,9 @@
 import "./ContactForm.css";
+import { FadeIn } from "./FadeIn";
 
 export function ContactForm() {
   return (
+    <FadeIn>
       <form className="contact-form">
         <div className="form-group">
           <label>FULL NAME</label>
@@ -23,7 +25,10 @@ export function ContactForm() {
           <textarea placeholder="Tell us about your requirements..."></textarea>
         </div>
 
-        <button className="submit" type="submit">SEND MESSAGE</button>
+        <button className="submit" type="submit">
+          SEND MESSAGE
+        </button>
       </form>
+    </FadeIn>
   );
 }

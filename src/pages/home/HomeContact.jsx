@@ -1,5 +1,7 @@
 import { ContactForm } from "../../components/ContactForm";
 import { PhoneIcon, EmailIcon, ClockIcon2 } from "../../components/SVGIcons";
+import { FadeIn } from "../../components/FadeIn";
+
 import "./HomeContact.css";
 
 export function HomeContact() {
@@ -11,6 +13,7 @@ export function HomeContact() {
       </div>
       <div className="contact-bodyy">
         <ContactForm />
+        <FadeIn>
         <div className="contact-details">
           <div className="contact-details-text">
             <div className="contact-details-item">
@@ -50,6 +53,7 @@ export function HomeContact() {
             ></iframe>
           </div>
         </div>
+        </FadeIn>
       </div>
     </div>
   );

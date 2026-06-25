@@ -14,7 +14,7 @@ export function HeroSection(){
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat" }}>
       <div className="hero-header">
-        <h1>
+        <h1 className="hero-line">
           KZN MACHINE <br /><span> TOOL SOLUTION CENTRE
           </span>
         </h1>
