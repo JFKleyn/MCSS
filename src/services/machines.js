@@ -117,3 +117,69 @@ export async function createMachineImages(machineId, imageUrls) {
 
   if (error) throw error;
 }
+
+export async function getMachine(machineId) {
+  const { data, error } = await supabase
+    .from("machines")
+    .select(`
+      *,
+      machine_specs (
+        id,
+        label,
+        value,
+        display_order
+      ),
+      machine_images (
+        id,
+        image_url,
+        alt_text,
+        display_order
+      )
+    `)
+    .eq("id", machineId)
+    .single();
+
+  if (error) throw error;
+
+  return data;
+}
+
+export async function deleteMachineImage(imageId) {
+  const { error } = await supabase
+    .from("machine_images")
+    .delete()
+    .eq("id", imageId);
+
+  if (error) throw error;
+}
+
+export async function updateMachine(machineId, machine) {
+  const { data, error } = await supabase
+    .from("machines")
+    .update({
+      title: machine.title,
+      description: machine.description,
+      price: machine.price,
+      category: machine.category,
+      status: machine.status,
+      updated_at: new Date().toISOString(),
+    })
+    .eq("id", machineId)
+    .select()
+    .single();
+
+  if (error) throw error;
+
+  return data;
+}
+
+export async function replaceMachineSpecs(machineId, specs) {
+  const { error: deleteError } = await supabase
+    .from("machine_specs")
+    .delete()
+    .eq("machine_id", machineId);
+
+  if (deleteError) throw deleteError;
+
+  await createMachineSpecs(machineId, specs);
+}

@@ -1,0 +1,139 @@
+.machine-form {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.machine-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: #111;
+}
+
+.machine-form input,
+.machine-form textarea,
+.machine-form select {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 18px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+.machine-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.machine-form button {
+  background: #d71920;
+  color: white;
+  border: none;
+  padding: 15px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.machine-form button[type="submit"] {
+  width: 100%;
+}
+
+.save-machine-button {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.specs-section {
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
+
+.specs-section h2,
+.images-section h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.spec-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.spec-row button {
+  background: #111;
+  color: white;
+  width: fit-content;
+}
+
+.secondary-button {
+  background: #d71920;
+  color: white;
+  width: fit-content;
+  margin-bottom: 24px;
+}
+
+.image-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 14px;
+  margin-bottom: 24px;
+}
+
+.image-preview {
+  position: relative;
+  height: 140px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #eee;
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.remove-image-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  min-width: unset;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.remove-image-button:hover {
+  background: #d71920;
+}
+
+
+@media (min-width: 700px) {
+  .spec-row {
+    grid-template-columns: 1fr 1fr auto;
+    align-items: start;
+  }
+
+  .image-preview-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

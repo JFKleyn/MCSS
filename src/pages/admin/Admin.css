@@ -125,6 +125,18 @@
   font-size: 14px;
 }
 
+.admin-edit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: #111;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 400;
+}
+
 
 @media (min-width: 800px) {
   .admin-machine-row {

@@ -12,8 +12,8 @@ export function Admin() {
   useEffect(() => {
     async function loadMachines() {
       const data = await getAllMachines();
-console.log("Admin machines:", data);
-setMachines(data);
+      console.log("Admin machines:", data);
+      setMachines(data);
     }
 
     loadMachines();
@@ -64,40 +64,47 @@ setMachines(data);
             <div className="admin-machine-list">
               {machines.map((machine) => (
                 <div className="admin-machine-row" key={machine.id}>
-  <div className="admin-machine-thumb">
-    {machine.machine_images?.[0] ? (
-      <img
-        src={machine.machine_images[0].image_url}
-        alt={machine.machine_images[0].alt_text || machine.title}
-      />
-    ) : (
-      <span>No Image</span>
-    )}
-  </div>
+                  <div className="admin-machine-thumb">
+                    {machine.machine_images?.[0] ? (
+                      <img
+                        src={machine.machine_images[0].image_url}
+                        alt={
+                          machine.machine_images[0].alt_text || machine.title
+                        }
+                      />
+                    ) : (
+                      <span>No Image</span>
+                    )}
+                  </div>
 
-  <div>
-    <h3>{machine.title}</h3>
-    <div className="admin-machine-meta">
-      <span>{machine.category}</span>
-      <span>{machine.status}</span>
-    </div>
-  </div>
+                  <div>
+                    <h3>{machine.title}</h3>
+                    <div className="admin-machine-meta">
+                      <span>{machine.category}</span>
+                      <span>{machine.status}</span>
+                    </div>
+                  </div>
 
-  <div className="admin-machine-counts">
-    <span>{machine.machine_images?.length || 0} Images</span>
-    <span>{machine.machine_specs?.length || 0} Specs</span>
-  </div>
+                  <div className="admin-machine-counts">
+                    <span>{machine.machine_images?.length || 0} Images</span>
+                    <span>{machine.machine_specs?.length || 0} Specs</span>
+                  </div>
 
-  <div className="admin-actions">
-    <button>Edit</button>
-    <button
-      className="delete-button"
-      onClick={() => handleDelete(machine.id)}
-    >
-      Delete
-    </button>
-  </div>
-</div>
+                  <div className="admin-actions">
+                    <Link
+                      to={`/admin/edit/${machine.id}`}
+                      className="admin-edit-button"
+                    >
+                      Edit
+                    </Link>
+                    <button
+                      className="delete-button"
+                      onClick={() => handleDelete(machine.id)}
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </div>
               ))}
             </div>
           )}

@@ -12,6 +12,7 @@ import { Login } from "./pages/login/Login";
 import { Admin } from "./pages/admin/Admin";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import { AddMachine } from "./pages/addMachine/AddMachine";
+import { EditMachine } from "./pages/editMachine/EditMachine";
 
 function App() {
   return (
@@ -40,6 +41,14 @@ function App() {
           element={
             <ProtectedRoute>
               <AddMachine />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/edit/:machineId"
+          element={
+            <ProtectedRoute>
+              <EditMachine />
             </ProtectedRoute>
           }
         />
