@@ -8,6 +8,11 @@ import "./Header.css";
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [newMachinesOpen, setNewMachinesOpen] = useState(false);
+
+  function toggleNewMachines() {
+    setNewMachinesOpen(!newMachinesOpen);
+  }
 
   useEffect(() => {
     function handleScroll() {
@@ -28,11 +33,13 @@ export function Header() {
 
   function toggleMachines() {
     setMachinesOpen(!machinesOpen);
+    setNewMachinesOpen(false);
   }
 
   function closeMenu() {
     setMenuOpen(false);
     setMachinesOpen(false);
+    setNewMachinesOpen(false);
   }
 
   return (
@@ -43,12 +50,26 @@ export function Header() {
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <div className="desktop-dropdown">
-            <button type="button" className="desktop-dropdown-title">Machines▾</button>
+            <button type="button" className="desktop-dropdown-title">
+              Machines▾
+            </button>
 
             <div className="desktop-submenu">
-              <a href="https://www.wdhearn.co.za" target="_blank">
-                New Machines
-              </a>
+              <div className="desktop-nested-dropdown">
+                <button type="button" className="desktop-submenu-button">
+                  New Machines ▸
+                </button>
+
+                <div className="desktop-nested-submenu">
+                  <a href="https://www.wdhearn.co.za" target="_blank">
+                    WD Hearn Machine Tools
+                  </a>
+                  <a href="https://leadmachinetools.co.za" target="_blank">
+                    Lead Machine Tools
+                  </a>
+                </div>
+              </div>
+
               <Link to="/machine-listing">Used Machines</Link>
             </div>
           </div>
@@ -82,9 +103,41 @@ export function Header() {
           </div>
 
           <div className={`mobile-submenu ${machinesOpen ? "open" : ""}`}>
-            <div className="submenu-spacer"></div>
-            <a href="https://www.wdhearn.co.za">New Machines</a>
-            <Link to="/machine-listing">Used Machines</Link>
+            <div className="mobile-submenu-inner">
+              <div className="mobile-new-machines">
+                <button
+                  type="button"
+                  className="mobile-new-machines-title"
+                  onClick={toggleNewMachines}
+                >
+                  New Machines▾
+                </button>
+
+                <div
+                  className={`mobile-new-machines-submenu ${newMachinesOpen ? "open" : ""}`}
+                >
+                  <div className="mobile-new-machines-submenu-inner">
+                    <a
+                      href="https://www.wdhearn.co.za"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      WD Hearn Machine Tools
+                    </a>
+
+                    <a
+                      href="https://leadmachinetools.co.za"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Lead Machine Tools
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <Link to="/machine-listing">Used Machines</Link>
+            </div>
           </div>
         </div>
         <Link to="/tools">Niche Tooling</Link>
