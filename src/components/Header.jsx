@@ -139,22 +139,16 @@ export function Header() {
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         <FontAwesomeIcon icon={faXmark} onClick={closeMenu} id="xmark" />
 
-        <NavLink
+        <Link
           to="/"
-          className={({ isActive }) =>
-            isActive ? "nav-link active" : "nav-link"
-          }
         >
           Home
-        </NavLink>
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            isActive ? "nav-link active" : "nav-link"
-          }
+        </Link>
+        <Link
+          to="/about"
         >
           About
-        </NavLink>
+        </Link>
         <div>
           <div className="mobile-dropdown-title" onClick={toggleMachines}>
             Machines▾
