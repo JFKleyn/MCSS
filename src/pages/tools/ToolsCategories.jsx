@@ -1,11 +1,9 @@
 import { ArrowIcon, PDFIcon } from "../../components/SVGIcons";
 import { Link } from "react-router";
 import { FadeIn } from "../../components/FadeIn";
-import cAndM from "../../assets/CuttingAndMachining.png";
-import toolHolding from "../../assets/ToolHolding.png";
-import measuring from "../../assets/Measuring.png";
-import grinding from "../../assets/Grinding.png";
-import cncSupport from "../../assets/CNCSupport.png";
+import cAndM from "../../assets/CuttingAndMachining.webp";
+import toolHolding from "../../assets/ToolHolding.webp";
+import cncSupport from "../../assets/CNCSupport.webp";
 import "./ToolsCategories.css";
 
 export function ToolsCategories() {

@@ -29,11 +29,22 @@
   text-align: left;
 }
 
-.footer-content{
+.footer-content2{
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
   align-items: left;
+}
+
+.footer-content2 p{
+  text-align: left;
+}
+
+.footer-content{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: flex-start;
 }
 
 .social-icons{

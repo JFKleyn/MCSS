@@ -1,8 +1,8 @@
-import { Link } from "react-router";
-import training from "../../assets/Training.png";
-import servicing from "../../assets/Servicing.png";
-import turnkey from "../../assets/Turnkey.png";
-import design from "../../assets/Design.png";
+import { Link, NavLink } from "react-router";
+import training from "../../assets/Training.webp";
+import servicing from "../../assets/Servicing.webp";
+import turnkey from "../../assets/Turnkey.webp";
+import design from "../../assets/Design.webp";
 import { FadeIn } from "../../components/FadeIn";
 import { TeachIcon, DesignIcon2, WrenchIcon } from "../../components/SVGIcons";
 import { ArrowIcon } from "../../components/SVGIcons";

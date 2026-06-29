@@ -1,8 +1,8 @@
 import { Link } from "react-router";
-import usedMachine from "../../assets/Product-UsedMachine.png";
-import newMachine from "../../assets/Product-NewMachine.png";
+import usedMachine from "../../assets/Product-UsedMachine.webp";
+import newMachine from "../../assets/Product-NewMachine.webp";
 import { FadeIn } from "../../components/FadeIn";
-import niche from "../../assets/Product-Niche.png";
+import niche from "../../assets/Product-Niche.webp";
 import "./HomeProducts.css";
 import { ArrowIcon } from "../../components/SVGIcons";
 
@@ -28,12 +28,12 @@ export function HomeProducts() {
                 durability.
               </p>
               <div className="view-button-container">
-                <Link to="/machines">
+                <a href="https://www.wdhearn.co.za">
                   <button>
                     <p>VIEW NEW</p>
                     <ArrowIcon />
                   </button>
-                </Link>
+                </a>
               </div>
             </div>
           </div>

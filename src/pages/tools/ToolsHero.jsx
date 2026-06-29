@@ -1,6 +1,6 @@
 import { Header } from "../../components/Header";
-import cAndM from "../../assets/CuttingAndMachining.png";
-import nicheLogo from "../../assets/NicheSA.png";
+import cAndM from "../../assets/CuttingAndMachining.webp";
+import nicheLogo from "../../assets/NicheSA.webp";
 import { FadeIn } from "../../components/FadeIn";
 import "./ToolsHero.css";
 

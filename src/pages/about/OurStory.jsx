@@ -1,5 +1,5 @@
 import { Timeline } from "../../components/Timeline";
-import teamPhoto from "../../assets/TeamPhoto.png";
+import teamPhoto from "../../assets/TeamPhoto.webp";
 import { FadeIn } from "../../components/FadeIn";
 import "./OurStory.css";
 

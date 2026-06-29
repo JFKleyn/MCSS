@@ -320,3 +320,39 @@
     gap: 60px;
   }
 }
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link.active {
+  color: #D12126;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #D12126;
+}
+
+.active-machine {
+  color: #D12126;
+  position: relative;
+}
+
+.active-machine::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #D12126;
+}

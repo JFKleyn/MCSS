@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/logo.webp";
+import { useLocation } from "react-router";
 import "./Header.css";
 
 export function Header() {
@@ -24,6 +25,10 @@ export function Header() {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const location = useLocation();
+
+  const machinesActive = location.pathname.includes("machine");
 
   function toggleMenu() {
     setMenuOpen(!menuOpen);
@@ -47,10 +52,28 @@ export function Header() {
       <div className={`header ${scrolled ? "scrolled" : ""}`}>
         <img src={Logo} alt="Logo" className="logo" />
         <div className="navigation">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            About
+          </NavLink>
           <div className="desktop-dropdown">
-            <button type="button" className="desktop-dropdown-title">
+            <button
+              className={`desktop-dropdown-title ${
+                machinesActive ? "active-machine" : ""
+              }`}
+            >
               Machines▾
             </button>
 
@@ -73,9 +96,30 @@ export function Header() {
               <Link to="/machine-listing">Used Machines</Link>
             </div>
           </div>
-          <Link to="/tools">Niche Tooling</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/contact">Contact</Link>
+          <NavLink
+            to="/tools"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            Niche Tooling
+          </NavLink>
+          <NavLink
+            to="/services"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            Services
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            Contact
+          </NavLink>
         </div>
         <div className="header-buttons">
           <Link to="/contact">
@@ -95,8 +139,22 @@ export function Header() {
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         <FontAwesomeIcon icon={faXmark} onClick={closeMenu} id="xmark" />
 
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
+          About
+        </NavLink>
         <div>
           <div className="mobile-dropdown-title" onClick={toggleMachines}>
             Machines▾

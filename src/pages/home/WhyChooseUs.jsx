@@ -1,11 +1,11 @@
 import { GridIcon, DesignIcon, ClockIcon } from "../../components/SVGIcons";
 import { FadeIn } from "../../components/FadeIn";
-import leadLogo from "../../assets/Lead2.png";
-import wdhearnLogo from "../../assets/WDHearn.png";
-import sandvikLogo from "../../assets/Sandvik.png";
-import tooltempLogo from "../../assets/ToolTemp.png";
-import nicheLogo from "../../assets/Niche.png";
-import hcfengLogo from "../../assets/HCFeng.png";
+import leadLogo from "../../assets/Lead2.webp";
+import wdhearnLogo from "../../assets/WDHearn.webp";
+import sandvikLogo from "../../assets/Sandvik.webp";
+import tooltempLogo from "../../assets/ToolTemp.webp";
+import nicheLogo from "../../assets/Niche.webp";
+import hcfengLogo from "../../assets/HCFeng.webp";
 import "./WhyChooseUs.css";
 
 export function WhyChooseUs() {

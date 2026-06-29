@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -12,15 +12,15 @@ import {
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Footer.css";
-import Logo from "../assets/logo-black.png";
+import Logo from "../assets/logo-black.webp";
 
 export function Footer() {
   return (
     <>
       <div className="footer">
         <div className="footer-container">
-          <div className="footer-content">
-            <img src={Logo} alt="Logo" className="logo" />
+          <div className="footer-content2">
+            <img src={Logo} alt="Logo2" className="logo" />
             <p>KZN’s leading solution provider for precision manufacturing.</p>
             <div className="social-icons">
               <a href="https://www.facebook.com/MylesCrosthwaiteServices" target="_blank" rel="noreferrer">
@@ -46,12 +46,12 @@ export function Footer() {
           </div>
           <div className="footer-content">
             <h4>NEW MACHINES</h4>
-            <a href="https://www.wdhearn.co.za">CNC Machines</a>
-            <a href="https://www.wdhearn.co.za">Fabrication</a>
-            <a href="https://www.wdhearn.co.za">Conventional Machines</a>
-            <a href="https://www.wdhearn.co.za">Specialized Machines</a>
-            <a href="https://www.wdhearn.co.za">Measuring & Inspection</a>
-            <a href="https://www.wdhearn.co.za">Grinding & Finishing</a>
+            <a href="https://www.wdhearn.co.za/product/cnc-controls">CNC Machines</a>
+            <a href="https://www.wdhearn.co.za/products">Fabrication</a>
+            <a href="https://www.wdhearn.co.za/product/conventional-toolroom-equipment">Conventional Machines</a>
+            <a href="https://www.wdhearn.co.za/products">Specialized Machines</a>
+            <a href="https://www.wdhearn.co.za/products">Measuring & Inspection</a>
+            <a href="https://www.wdhearn.co.za/product/grinding">Grinding & Finishing</a>
           </div>
           <div className="footer-content">
             <h4>USED MACHINES</h4>

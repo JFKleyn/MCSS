@@ -1,5 +1,5 @@
 import { Header } from "../../components/Header";
-import hero from "../../assets/AboutBackround.png";
+import hero from "../../assets/AboutBackround.webp";
 import { FadeIn } from "../../components/FadeIn";
 import "./AboutHero.css";
 
