@@ -86,6 +86,10 @@
   object-fit: contain;
 }
 
+#tooltemp{
+  margin: 0px 40px 0px 20px;
+}
+
 @keyframes scroll {
   from {
     transform: translateX(0);

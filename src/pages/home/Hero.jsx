@@ -3,6 +3,8 @@ import { Link } from "react-router";
 import Hero from "../../assets/hero-back.png"
 import leadLogo from "../../assets/Lead.png"
 import wdhearnLogo from "../../assets/WDHearn.png"
+import niche from "../../assets/Niche.png"
+import tooltemp from "../../assets/TooltempHero.png"
 import './Hero.css'
 
 export function HeroSection(){
@@ -25,7 +27,7 @@ export function HeroSection(){
             <Link to="/contact">
               <button>CONTACT US</button>
             </Link>
-            <Link to="/admin">
+            <Link to="/machine-listing">
               <button className="product-button">OUR PRODUCTS</button>
             </Link>
         </div>
@@ -36,59 +38,66 @@ export function HeroSection(){
         <div className="slider">
           <div className="slide-track">
             <a href="https://www.wdhearn.co.za">
+              <img src={wdhearnLogo} alt="WD Hearn" />
+            </a>
+            <a href="https://www.leadmachinetools.co.za">
               <img src={leadLogo} alt="Lead" />
+            </a>
+            <a href="https://www.niche-tool.com">
+              <img src={niche} alt="WD Hearn" />
+            </a>
+            <a href="https://www.tooltempsouthafrica.co.za">
+              <img src={tooltemp} id="tooltemp" alt="Lead" />
             </a>
             <a href="https://www.wdhearn.co.za">
               <img src={wdhearnLogo} alt="WD Hearn" />
             </a>
-            <a href="https://www.wdhearn.co.za">
+            <a href="https://www.leadmachinetools.co.za">
               <img src={leadLogo} alt="Lead" />
+            </a>
+            <a href="https://www.niche-tool.com">
+              <img src={niche} alt="WD Hearn" />
+            </a>
+            <a href="https://www.tooltempsouthafrica.co.za">
+              <img src={tooltemp} id="tooltemp" alt="Lead" />
             </a>
             <a href="https://www.wdhearn.co.za">
               <img src={wdhearnLogo} alt="WD Hearn" />
             </a>
-            <a href="https://www.wdhearn.co.za">
+            <a href="https://www.leadmachinetools.co.za">
               <img src={leadLogo} alt="Lead" />
+            </a>
+            <a href="https://www.niche-tool.com">
+              <img src={niche} alt="WD Hearn" />
+            </a>
+            <a href="https://www.tooltempsouthafrica.co.za">
+              <img src={tooltemp} id="tooltemp" alt="Lead" />
             </a>
             <a href="https://www.wdhearn.co.za">
               <img src={wdhearnLogo} alt="WD Hearn" />
             </a>
-            <a href="https://www.wdhearn.co.za">
+            <a href="https://www.leadmachinetools.co.za">
               <img src={leadLogo} alt="Lead" />
+            </a>
+            <a href="https://www.niche-tool.com">
+              <img src={niche} alt="WD Hearn" />
+            </a>
+            <a href="https://www.tooltempsouthafrica.co.za">
+              <img src={tooltemp} id="tooltemp" alt="Lead" />
             </a>
             <a href="https://www.wdhearn.co.za">
               <img src={wdhearnLogo} alt="WD Hearn" />
             </a>
-            <a href="https://www.wdhearn.co.za">
+            <a href="https://www.leadmachinetools.co.za">
               <img src={leadLogo} alt="Lead" />
             </a>
-            <a href="https://www.wdhearn.co.za">
-              <img src={wdhearnLogo} alt="WD Hearn" />
+            <a href="https://www.niche-tool.com">
+              <img src={niche} alt="WD Hearn" />
             </a>
-            <a href="https://www.wdhearn.co.za">
-              <img src={leadLogo} alt="Lead" />
+            <a href="https://www.tooltempsouthafrica.co.za">
+              <img src={tooltemp} id="tooltemp" alt="Lead" />
             </a>
-            <a href="https://www.wdhearn.co.za">
-              <img src={wdhearnLogo} alt="WD Hearn" />
-            </a>
-            <a href="https://www.wdhearn.co.za">
-              <img src={leadLogo} alt="Lead" />
-            </a>
-            <a href="https://www.wdhearn.co.za">
-              <img src={wdhearnLogo} alt="WD Hearn" />
-            </a>
-            <a href="https://www.wdhearn.co.za">
-              <img src={leadLogo} alt="Lead" />
-            </a>
-            <a href="https://www.wdhearn.co.za">
-              <img src={wdhearnLogo} alt="WD Hearn" />
-            </a>
-            <a href="https://www.wdhearn.co.za">
-              <img src={leadLogo} alt="Lead" />
-            </a>
-            <a href="https://www.wdhearn.co.za">
-              <img src={wdhearnLogo} alt="WD Hearn" />
-            </a>
+           
           </div>
         </div>
       </div>

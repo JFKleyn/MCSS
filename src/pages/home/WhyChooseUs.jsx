@@ -82,10 +82,10 @@ export function WhyChooseUs() {
               <a href="https://www.wdhearn.co.za">
                 <img src={wdhearnLogo} alt="Lead" className="partner-logo" />
               </a>
-              <a href="https://www.wdhearn.co.za">
+              <a href="https://www.leadmachinetools.co.za">
                 <img src={leadLogo} alt="WD Hearn" className="partner-logo" />
               </a>
-              <a href="https://www.wdhearn.co.za">
+              <a href="https://www.sandvik.coromant.com">
                 <img src={sandvikLogo} alt="Lead" className="partner-logo" />
               </a>
             </div>
@@ -99,9 +99,13 @@ export function WhyChooseUs() {
               <p>Exclusive representation</p>
             </div>
             <div className="official-agents-body">
+              <a href="https://www.niche-tool.com">
               <img src={nicheLogo} alt="WD Hearn" className="partner-logo" />
+              </a>
+              <a href="https://www.hcfeng.com">
               <img src={hcfengLogo} alt="Lead" className="partner-logo" />
-              <a href="https://www.wdhearn.co.za">
+              </a>
+              <a href="https://www.tooltempsouthafrica.co.za">
                 <img src={tooltempLogo} alt="Lead" className="partner-logo" />
               </a>
             </div>

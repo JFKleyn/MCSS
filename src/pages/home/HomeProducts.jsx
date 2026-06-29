@@ -16,27 +16,6 @@ export function HomeProducts() {
         </div>
       </FadeIn>
       <div className="product-containers">
-        <FadeIn>
-          <div className="product-container">
-            <img src={usedMachine} alt="Lead" className="product-image" />
-            <div className="product-container-text">
-              <h4>Used Machine Tools</h4>
-              <p>
-                Fully inspected pre-owned inventory. Meticulously maintained
-                industrial hardware for immediate deployment and cost-efficient
-                scaling.
-              </p>
-              <div className="view-button-container">
-                <Link to="/machine-listing">
-                  <button>
-                    <p>VIEW USED</p>
-                    <ArrowIcon />
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </FadeIn>
 
         <FadeIn>
           <div className="product-container">
@@ -60,6 +39,28 @@ export function HomeProducts() {
           </div>
         </FadeIn>
 
+        <FadeIn>
+          <div className="product-container">
+            <img src={usedMachine} alt="Lead" className="product-image" />
+            <div className="product-container-text">
+              <h4>Used Machine Tools</h4>
+              <p>
+                Fully inspected pre-owned inventory. Meticulously maintained
+                industrial hardware for immediate deployment and cost-efficient
+                scaling.
+              </p>
+              <div className="view-button-container">
+                <Link to="/machine-listing">
+                  <button>
+                    <p>VIEW USED</p>
+                    <ArrowIcon />
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </FadeIn>
+        
         <FadeIn>
           <div className="product-container">
             <img src={niche} alt="Lead" className="product-image" />

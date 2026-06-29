@@ -25,6 +25,12 @@
   gap: 10px;
 }
 
+.footer2-buttons button{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .footer2-btn1{
   background-color: white;
   color: #D12126;

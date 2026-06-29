@@ -1,18 +1,26 @@
+import { Link } from "react-router-dom";
 import { PhoneIcon, EmailIcon } from "../../components/SVGIcons";
 import "./Footer2.css";
 
-export function Footer2(){
-  return(
+export function Footer2() {
+  return (
     <div className="footer2-section">
       <h2>PRECISION SOLUTIONS START HERE</h2>
-      <p>From precision tooling to expert support, our team is ready to deliver reliable solutions tailored to your operational needs.</p>
+      <p>
+        From precision tooling to expert support, our team is ready to deliver
+        reliable solutions tailored to your operational needs.
+      </p>
       <div className="footer2-buttons">
-        <button className="footer2-btn1">
-          <h5>CONTACT US NOW</h5>
-        </button>
-        <button className="footer2-btn2">
-          <h5>REQUEST A QUOTE</h5>
-        </button>
+        <Link to={"/contact"}>
+          <button className="footer2-btn1">
+            <h5>CONTACT US NOW</h5>
+          </button>
+        </Link>
+        <Link to={"/contact"}>
+          <button className="footer2-btn2">
+            <h5>REQUEST A QUOTE</h5>
+          </button>
+        </Link>
       </div>
       <div className="footer2-contact">
         <div className="footer2-contact-item">
@@ -25,5 +33,5 @@ export function Footer2(){
         </div>
       </div>
     </div>
-  )
+  );
 }

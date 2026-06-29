@@ -1,4 +1,5 @@
 import "./MachineCategory.css";
+import { Link } from "react-router-dom";
 import { MachineImageSlider } from "../MachineImageSlider/MachineImageSlider";
 
 export function MachineCategory({ title, machines }) {
@@ -52,7 +53,9 @@ export function MachineCategory({ title, machines }) {
                   </h3>
                 </div>
 
-                <button>Enquire Now</button>
+                <Link to={"/contact"}>
+                  <button>Enquire Now</button>
+                </Link>
               </div>
             </div>
           </article>

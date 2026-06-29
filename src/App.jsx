@@ -2,7 +2,6 @@ import { HomePage } from "./pages/home/HomePage";
 import { AboutPage } from "./pages/about/AboutPage";
 import { Routes, Route } from "react-router-dom";
 import { ScrollToTop } from "./components/ScrollToTop";
-import { MachinePage } from "./pages/machines/MachinePage";
 import { MachineListing } from "./pages/listing/MachineListing";
 import { ToolsPage } from "./pages/tools/ToolsPage";
 import "./App.css";
@@ -13,6 +12,7 @@ import { Admin } from "./pages/admin/Admin";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import { AddMachine } from "./pages/addMachine/AddMachine";
 import { EditMachine } from "./pages/editMachine/EditMachine";
+import { BevContact } from "./pages/contact/BevContact";
 
 function App() {
   return (
@@ -22,10 +22,10 @@ function App() {
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="about" element={<AboutPage />} />
-        <Route path="machines" element={<MachinePage />} />
         <Route path="machine-listing" element={<MachineListing />} />
         <Route path="tools" element={<ToolsPage />} />
         <Route path="contact" element={<ContactPage />} />
+        <Route path="bev-contact" element={<BevContact />} />
         <Route path="services" element={<ServicesPage />} />
         <Route path="login" element={<Login />} />
         <Route

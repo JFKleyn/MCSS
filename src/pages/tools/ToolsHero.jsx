@@ -31,58 +31,58 @@ export function ToolsHero() {
         <div className="partners-banner">
           <div className="slider">
             <div className="slide-track">
-              <a href="https://www.wdhearn.co.za">
+              <a href="https://www.niche-tool.com">
                 <img src={nicheLogo} alt="Lead" />
               </a>
-              <a href="https://www.wdhearn.co.za">
+              <a href="https://www.niche-tool.com">
                 <img src={nicheLogo} alt="WD Hearn" />
               </a>
-              <a href="https://www.wdhearn.co.za">
+              <a href="https://www.niche-tool.com">
                 <img src={nicheLogo} alt="Lead" />
               </a>
-              <a href="https://www.wdhearn.co.za">
+              <a href="https://www.niche-tool.com">
                 <img src={nicheLogo} alt="WD Hearn" />
               </a>
-              <a href="https://www.wdhearn.co.za">
+              <a href="https://www.niche-tool.com">
                 <img src={nicheLogo} alt="Lead" />
               </a>
-              <a href="https://www.wdhearn.co.za">
+              <a href="https://www.niche-tool.com">
                 <img src={nicheLogo} alt="WD Hearn" />
               </a>
-              <a href="https://www.wdhearn.co.za">
+              <a href="https://www.niche-tool.com">
                 <img src={nicheLogo} alt="Lead" />
               </a>
-              <a href="https://www.wdhearn.co.za">
+              <a href="https://www.niche-tool.com">
                 <img src={nicheLogo} alt="WD Hearn" />
               </a>
-              <a href="https://www.wdhearn.co.za">
+              <a href="https://www.niche-tool.com">
                 <img src={nicheLogo} alt="Lead" />
               </a>
-              <a href="https://www.wdhearn.co.za">
+              <a href="https://www.niche-tool.com">
                 <img src={nicheLogo} alt="WD Hearn" />
               </a>
-              <a href="https://www.wdhearn.co.za">
+              <a href="https://www.niche-tool.com">
                 <img src={nicheLogo} alt="Lead" />
               </a>
-              <a href="https://www.wdhearn.co.za">
+              <a href="https://www.niche-tool.com">
                 <img src={nicheLogo} alt="WD Hearn" />
               </a>
-              <a href="https://www.wdhearn.co.za">
+              <a href="https://www.niche-tool.com">
                 <img src={nicheLogo} alt="Lead" />
               </a>
-              <a href="https://www.wdhearn.co.za">
+              <a href="https://www.niche-tool.com">
                 <img src={nicheLogo} alt="WD Hearn" />
               </a>
-              <a href="https://www.wdhearn.co.za">
+              <a href="https://www.niche-tool.com">
                 <img src={nicheLogo} alt="Lead" />
               </a>
-              <a href="https://www.wdhearn.co.za">
+              <a href="https://www.niche-tool.com">
                 <img src={nicheLogo} alt="WD Hearn" />
               </a>
-              <a href="https://www.wdhearn.co.za">
+              <a href="https://www.niche-tool.com">
                 <img src={nicheLogo} alt="Lead" />
               </a>
-              <a href="https://www.wdhearn.co.za">
+              <a href="https://www.niche-tool.com">
                 <img src={nicheLogo} alt="WD Hearn" />
               </a>
             </div>

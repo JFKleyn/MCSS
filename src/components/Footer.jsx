@@ -23,20 +23,20 @@ export function Footer() {
             <img src={Logo} alt="Logo" className="logo" />
             <p>KZN’s leading solution provider for precision manufacturing.</p>
             <div className="social-icons">
-              <a href="https://facebook.com" target="_blank" rel="noreferrer">
+              <a href="https://www.facebook.com/MylesCrosthwaiteServices" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon className="icon" icon={faFacebook} />
               </a>
 
-              <a href="https://instagram.com" target="_blank" rel="noreferrer">
+              <a href="https://www.instagram.com/mcswdhearn/?hl=en" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon className="icon" icon={faInstagram} />
               </a>
 
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+              <a href="https://www.linkedin.com/in/myles-crosthwaite/" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon className="icon" icon={faLinkedin} />
               </a>
 
               <a
-                href="https://wa.me/27821234567"
+                href="https://wa.me/27832684232"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -50,27 +50,27 @@ export function Footer() {
             <a href="https://www.wdhearn.co.za">Fabrication</a>
             <a href="https://www.wdhearn.co.za">Conventional Machines</a>
             <a href="https://www.wdhearn.co.za">Specialized Machines</a>
+            <a href="https://www.wdhearn.co.za">Measuring & Inspection</a>
+            <a href="https://www.wdhearn.co.za">Grinding & Finishing</a>
           </div>
           <div className="footer-content">
-            <h4>NEW MACHINES</h4>
-            <Link to={"/machines"}>CNC Machines</Link>
-            <Link to={"/machines"}>Fabrication</Link>
-            <Link to={"/machines"}>Conventional Machines</Link>
-            <Link to={"/machines"}>Specialized Machines</Link>
+            <h4>USED MACHINES</h4>
+            <Link to={"/machine-listing"}>CNC Machines</Link>
+            <Link to={"/machine-listing"}>Fabrication</Link>
+            <Link to={"/machine-listing"}>Conventional Machines</Link>
+            <Link to={"/machine-listing"}>Specialized Machines</Link>
           </div>
           <div className="footer-content">
             <h4>NICHE TOOLING</h4>
             <Link to={"/tools"}>Cutting & Machining</Link>
             <Link to={"/tools"}>Tool & Work Holding</Link>
-            <Link to={"/tools"}>Measuring & Inspection</Link>
-            <Link to={"/tools"}>Grinding & Finishing</Link>
             <Link to={"/tools"}>CNC Support</Link>
           </div>
           <div className="footer-content">
             <h4>CONTACT</h4>
             <div className="contact-item">
               <FontAwesomeIcon className="icon" icon={faPhone} />
-              <span>+27 82 123 4567</span>
+              <span>+27 83 268 4232</span>
             </div>
             <div className="contact-item">
               <FontAwesomeIcon className="icon" icon={faEnvelope} />
