@@ -3,7 +3,8 @@ import { Link } from "react-router";
 import { FadeIn } from "../../components/FadeIn";
 import cAndM from "../../assets/CuttingAndMachining.webp";
 import toolHolding from "../../assets/ToolHolding.webp";
-import cncSupport from "../../assets/CNCSupport.webp";
+import nicheTooling from "../../assets/pdfs/NICHE_tooling.pdf";
+import nicheToolHolders from "../../assets/pdfs/NICHE_Tool_Holders.pdf";
 import "./ToolsCategories.css";
 
 export function ToolsCategories() {
@@ -41,10 +42,12 @@ export function ToolsCategories() {
               </p>
             </div>
             <div className="tool-buttons">
-              <button className="pdf">
-                <PDFIcon />
-                <p>DOWNLOAD PDF</p>
-              </button>
+              <a href={nicheTooling} download className="pdf">
+                <button>
+                  <PDFIcon />
+                  <p>DOWNLOAD PDF</p>
+                </button>
+              </a>
               <Link to="/bev-contact">
                 <button className="product-button">
                   <p>GET A QUOTE</p>
@@ -87,56 +90,12 @@ export function ToolsCategories() {
               </p>
             </div>
             <div className="tool-buttons">
-              <button className="pdf">
-                <PDFIcon />
-                <p>DOWNLOAD PDF</p>
-              </button>
-              <Link to="/bev-contact">
-                <button className="product-button">
-                  <p>GET A QUOTE</p>
-                  <ArrowIcon />
+              <a href={nicheToolHolders} download className="pdf">
+                <button>
+                  <PDFIcon />
+                  <p>DOWNLOAD PDF</p>
                 </button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </FadeIn>
-      <FadeIn>
-        <div
-          className="tool-category"
-          style={{
-            backgroundImage: `url(${cncSupport})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <div className="tool-info">
-            <div className="tool-header">
-              <h2>CNC SUPPORT</h2>
-              <div className="line"></div>
-              <p>
-                Essential CNC machine accessories and support equipment. Coolant
-                systems, machine accessories, and replacement parts for optimal
-                machine performance.
-              </p>
-            </div>
-            <div className="category-text">
-              <p>
-                <span>•</span> CNC Accessories
-              </p>
-              <p>
-                <span>•</span> Machine Accessories
-              </p>
-              <p>
-                <span>•</span> Coolant & Lubrication Systems
-              </p>
-            </div>
-            <div className="tool-buttons">
-              <button className="pdf">
-                <PDFIcon />
-                <p>DOWNLOAD PDF</p>
-              </button>
+              </a>
               <Link to="/bev-contact">
                 <button className="product-button">
                   <p>GET A QUOTE</p>
