@@ -11,7 +11,7 @@ export function ListingHero() {
         <FadeIn>
           <div className="machine-hero-container">
             <p>PRECISION INVENTORY</p>
-            <h1>USED MACHINE TOOLS</h1>
+            <h1>USED MACHINE TOOLS FOR SALE</h1>
             <p>
               Explore our comprehensive range of industrial machinery. Each
               category features meticulously inspected pre-owned equipment,
