@@ -3,7 +3,7 @@ import { FadeIn } from "../../components/FadeIn";
 import leadLogo from "../../assets/Lead2.webp";
 import wdhearnLogo from "../../assets/WDHearn.webp";
 import sandvikLogo from "../../assets/Sandvik.webp";
-import tooltempLogo from "../../assets/ToolTemp.webp";
+import tooltempLogo from "../../assets/Tooltemp.webp";
 import nicheLogo from "../../assets/Niche.webp";
 import hcfengLogo from "../../assets/HCFeng.webp";
 import "./WhyChooseUs.css";
