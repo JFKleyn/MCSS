@@ -1,5 +1,5 @@
 import { Header } from "../../components/Header";
-import { Link, NavLink } from "react-router";
+import { Link } from "react-router";
 import Hero from "../../assets/hero-back.webp"
 import leadLogo from "../../assets/Lead.webp"
 import wdhearnLogo from "../../assets/WDHearn.webp"
