@@ -72,7 +72,7 @@ export function HomeProducts() {
                 Tooling.
               </p>
               <div className="view-button-container">
-                <Link to="/machines">
+                <Link to="/tools">
                   <button>
                     <p>VIEW TOOLS</p>
                     <ArrowIcon />
