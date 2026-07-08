@@ -35,7 +35,7 @@ export function WhyChooseUs() {
             </div>
             <h2>7</h2>
             <small>
-              Highly Experiences
+              Highly Experienced
               <br /> Technicians
             </small>
           </div>
