@@ -46,10 +46,13 @@ export function MachineCategory({ title, machines }) {
                 <div>
                   <span>Price:</span>
                   <h3>
-                    R{" "}
-                    {Number(machine.price).toLocaleString("en-ZA", {
-                      maximumFractionDigits: 0,
-                    })}
+                    {machine.price !== null &&
+                    machine.price !== undefined &&
+                    machine.price !== ""
+                      ? `R ${Number(machine.price).toLocaleString("en-ZA", {
+                          maximumFractionDigits: 0,
+                        })}`
+                      : "POA"}
                   </h3>
                 </div>
 
