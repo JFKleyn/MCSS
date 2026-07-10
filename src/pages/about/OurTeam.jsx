@@ -1,4 +1,8 @@
-import placeholder from "../../assets/Placeholder.webp";
+import myles from "../../assets/Myles.webp";
+import donovan from "../../assets/Donovan.webp";
+import brandon from "../../assets/Brandon.webp";
+import shawn from "../../assets/Shawn.webp";
+import gerdus from "../../assets/Gerdus.webp";
 import { FadeIn } from "../../components/FadeIn";
 import "./OurTeam.css";
 
@@ -18,66 +22,55 @@ export function OurTeam() {
         <FadeIn>
           <div className="team-profile">
             <div className="profile-photo">
-              <img src={placeholder} alt="" />
+              <img src={myles} alt="" />
             </div>
             <div className="profile-text">
               <h4>Myles Crosthwaite</h4>
-              <p>Branch Manager</p>
+              <p>Director</p>
             </div>
           </div>
         </FadeIn>
         <FadeIn>
           <div className="team-profile">
             <div className="profile-photo">
-              <img src={placeholder} alt="" />
+              <img src={brandon} alt="" />
             </div>
             <div className="profile-text">
               <h4>Brandon Scott</h4>
-              <p>Executive Sales Engineer</p>
+              <p>Machine Tool Specialist</p>
             </div>
           </div>
         </FadeIn>
         <FadeIn>
           <div className="team-profile">
             <div className="profile-photo">
-              <img src={placeholder} alt="" />
+              <img src={shawn} alt="" />
             </div>
             <div className="profile-text">
               <h4>Shawn Mccabe</h4>
-              <p>Executive Sales Engineer</p>
+              <p>Technical Sales</p>
             </div>
           </div>
         </FadeIn>
         <FadeIn>
           <div className="team-profile">
             <div className="profile-photo">
-              <img src={placeholder} alt="" />
-            </div>
-            <div className="profile-text">
-              <h4>Vicky Angles</h4>
-              <p>Key Administrator</p>
-            </div>
-          </div>
-        </FadeIn>
-        <FadeIn>
-          <div className="team-profile">
-            <div className="profile-photo">
-              <img src={placeholder} alt="" />
+              <img src={gerdus} alt="" />
             </div>
             <div className="profile-text">
               <h4>Gerdus Beukes</h4>
-              <p>Service Team Manager</p>
+              <p>Technical Sales</p>
             </div>
           </div>
         </FadeIn>
         <FadeIn>
           <div className="team-profile">
             <div className="profile-photo">
-              <img src={placeholder} alt="" />
+              <img src={donovan} alt="" />
             </div>
             <div className="profile-text">
-              <h4>Kyle Crosthwaite</h4>
-              <p>Laser Expert Sales & Services</p>
+              <h4>Donovan Schmidt</h4>
+              <p>Technical Service and Training Expert CNC</p>
             </div>
           </div>
         </FadeIn>
