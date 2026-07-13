@@ -23,6 +23,8 @@
   border-radius: 10px;
   overflow: hidden;
   background-color: #d1212714;
+  border: 3px solid #D12126;
+  box-shadow: 0 6px 10px rgb(0, 0, 0, 0.2);
 }
 
 .profile-photo {
