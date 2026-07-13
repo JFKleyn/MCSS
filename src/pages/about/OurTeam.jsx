@@ -117,7 +117,7 @@ export function OurTeam() {
               <img src={philani} alt="" />
             </div>
             <div className="profile-text">
-              <h4>Philani</h4>
+              <h4>Philani Hlengwa</h4>
               <p>Senior Service Engineer</p>
             </div>
           </div>
