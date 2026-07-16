@@ -51,7 +51,7 @@ export function OurTeam() {
               <img src={bev} alt="" />
             </div>
             <div className="profile-text">
-              <h4>Beverly Osborn</h4>
+              <h4>Beverley Osborn</h4>
               <p>Niche Tooling Specialist</p>
             </div>
           </div>
