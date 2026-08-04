@@ -13,10 +13,12 @@ import { ProtectedRoute } from "./components/ProtectedRoute";
 import { AddMachine } from "./pages/addMachine/AddMachine";
 import { EditMachine } from "./pages/editMachine/EditMachine";
 import { BevContact } from "./pages/contact/BevContact";
+import Analytics from "./components/Analytics";
 
 function App() {
   return (
     <>
+      <Analytics />
       <ScrollToTop />
 
       <Routes>
