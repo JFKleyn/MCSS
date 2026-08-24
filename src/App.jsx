@@ -14,6 +14,7 @@ import { AddMachine } from "./pages/addMachine/AddMachine";
 import { EditMachine } from "./pages/editMachine/EditMachine";
 import { BevContact } from "./pages/contact/BevContact";
 import Analytics from "./components/Analytics";
+import { NotFound } from "./pages/notFound/NotFound";
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
