@@ -1,0 +1,11 @@
+/ /index.html 200
+/about /index.html 200
+/machine-listing /index.html 200
+/tools /index.html 200
+/contact /index.html 200
+/bev-contact /index.html 200
+/services /index.html 200
+/login /index.html 200
+/admin /index.html 200
+/admin/add-machine /index.html 200
+/admin/edit/* /index.html 200
