@@ -11,7 +11,9 @@ export function HomePage() {
   return (
     <>
       <Helmet>
-        <title>KZN Machine Tool Solutions | New & Used Machine Tools | MCSS</title>
+        <title>
+          KZN Machine Tool Solutions | New & Used Machine Tools | MCSS
+        </title>
 
         <meta
           name="description"
@@ -23,10 +25,7 @@ export function HomePage() {
           content="machine tools, CNC machines, used machine tools, machine tooling, CNC lathes, milling machines, engineering equipment, machine servicing, KZN, South Africa"
         />
 
-        <meta
-          property="og:title"
-          content="KZN Machine Tool Solutions | MCSS"
-        />
+        <meta property="og:title" content="KZN Machine Tool Solutions | MCSS" />
 
         <meta
           property="og:description"
@@ -34,7 +33,8 @@ export function HomePage() {
         />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://jfkleyn.github.io/MCSS/" />
+        <meta property="og:url" content="https://www.kznmts.co.za/" />
+        <link rel="canonical" href="https://www.kznmts.co.za/" />
       </Helmet>
 
       <HeroSection />

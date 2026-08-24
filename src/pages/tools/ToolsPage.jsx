@@ -31,10 +31,8 @@ export function ToolsPage() {
 
         <meta property="og:type" content="website" />
 
-        <meta
-          property="og:url"
-          content="https://www.yourdomain.co.za/niche-tooling"
-        />
+        <meta property="og:url" content="https://www.kznmts.co.za/tools" />
+        <link rel="canonical" href="https://www.kznmts.co.za/tools" />
       </Helmet>
       <ToolsHero />
       <ToolsCategories />

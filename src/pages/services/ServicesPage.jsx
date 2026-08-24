@@ -44,8 +44,9 @@ export function ServicesPage() {
 
         <meta
           property="og:url"
-          content="https://www.yourdomain.co.za/services"
+          content="https://www.kznmts.co.za/services"
         />
+        <link rel="canonical" href="https://www.kznmts.co.za/services" />
       </Helmet>
       <ServicesHero />
       <Services />
