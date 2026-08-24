@@ -36,8 +36,9 @@ export function BevContact() {
 
         <meta
           property="og:url"
-          content="https://www.yourdomain.co.za/contact"
+          content="https://www.kznmts.co.za/bev-contact"
         />
+        <link rel="canonical" href="https://www.kznmts.co.za/bev-contact" />
       </Helmet>
       <Header />
       <div className="contact-section contact-page">

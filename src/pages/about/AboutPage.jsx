@@ -34,7 +34,8 @@ export function AboutPage() {
 
         <meta property="og:type" content="website" />
 
-        <meta property="og:url" content="https://www.yourdomain.co.za/about" />
+        <meta property="og:url" content="https://www.kznmts.co.za/about" />
+        <link rel="canonical" href="https://www.kznmts.co.za/about" />
       </Helmet>
       <AboutHero />
       <OurStory />

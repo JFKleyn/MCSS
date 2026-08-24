@@ -71,8 +71,9 @@ export function MachineListing() {
 
         <meta
           property="og:url"
-          content="https://www.yourdomain.co.za/used-machines"
+          content="https://www.kznmts.co.za/machine-listing"
         />
+        <link rel="canonical" href="https://www.kznmts.co.za/machine-listing" />
       </Helmet>
       <ListingHero />
       <main className="machine-listing-page">

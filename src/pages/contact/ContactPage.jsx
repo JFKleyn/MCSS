@@ -34,10 +34,8 @@ export function ContactPage() {
 
         <meta property="og:type" content="website" />
 
-        <meta
-          property="og:url"
-          content="https://www.yourdomain.co.za/contact"
-        />
+        <meta property="og:url" content="https://www.kznmts.co.za/contact" />
+        <link rel="canonical" href="https://www.kznmts.co.za/contact" />
       </Helmet>
       <Header />
       <div className="contact-section contact-page">
