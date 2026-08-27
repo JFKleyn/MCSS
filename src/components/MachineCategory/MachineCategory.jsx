@@ -56,7 +56,11 @@ export function MachineCategory({ title, machines }) {
                   </h3>
                 </div>
 
-                <Link to={"/contact"}>
+                <Link
+                  to={`/contact?machineId=${encodeURIComponent(
+                    machine.id,
+                  )}&machine=${encodeURIComponent(machine.title)}`}
+                >
                   <button>Enquire Now</button>
                 </Link>
               </div>
