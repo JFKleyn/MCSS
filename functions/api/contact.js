@@ -31,7 +31,6 @@ export async function onRequestPost(context) {
           <h3>Machine Enquiry Details</h3>
 
           <p><strong>Machine:</strong> ${machineTitle}</p>
-          <p><strong>Machine ID:</strong> ${machineId}</p>
         `
       : "";
 
