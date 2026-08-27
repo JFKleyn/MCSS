@@ -1,12 +1,22 @@
 import { ContactForm } from "../../components/ContactForm";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
-import { PhoneIcon, EmailIcon, ClockIcon2 } from "../../components/SVGIcons";
+import {
+  PhoneIcon,
+  EmailIcon,
+  ClockIcon2,
+} from "../../components/SVGIcons";
 import { FadeIn } from "../../components/FadeIn";
 import { Helmet } from "react-helmet-async";
+import { useSearchParams } from "react-router-dom";
 import "./ContactPage.css";
 
 export function ContactPage() {
+  const [searchParams] = useSearchParams();
+
+  const machineId = searchParams.get("machineId");
+  const machineTitle = searchParams.get("machine");
+
   return (
     <>
       <Helmet>
@@ -34,17 +44,31 @@ export function ContactPage() {
 
         <meta property="og:type" content="website" />
 
-        <meta property="og:url" content="https://www.kznmts.co.za/contact" />
-        <link rel="canonical" href="https://www.kznmts.co.za/contact" />
+        <meta
+          property="og:url"
+          content="https://www.kznmts.co.za/contact"
+        />
+
+        <link
+          rel="canonical"
+          href="https://www.kznmts.co.za/contact"
+        />
       </Helmet>
+
       <Header />
+
       <div className="contact-section contact-page">
         <div className="section-header">
           <p>CONTACT US</p>
           <h1>GET IN TOUCH</h1>
         </div>
+
         <div className="contact-bodyy">
-          <ContactForm />
+          <ContactForm
+            machineId={machineId}
+            machineTitle={machineTitle}
+          />
+
           <FadeIn>
             <div className="contact-details">
               <div className="contact-details-text">
@@ -52,30 +76,40 @@ export function ContactPage() {
                   <div className="contact-svg">
                     <PhoneIcon />
                   </div>
+
                   <div className="contact-details-items">
                     <p className="notbold">PHONE</p>
                     <p className="bold">+27 83 268 4232</p>
                   </div>
                 </div>
+
                 <div className="contact-details-item">
                   <div className="contact-svg">
                     <EmailIcon />
                   </div>
+
                   <div className="contact-details-items">
                     <p className="notbold">EMAIL</p>
-                    <p className="bold">myles@usedmachinetools.co.za</p>
+                    <p className="bold">
+                      myles@usedmachinetools.co.za
+                    </p>
                   </div>
                 </div>
+
                 <div className="contact-details-item">
                   <div className="contact-svg">
                     <ClockIcon2 />
                   </div>
+
                   <div className="contact-details-items">
                     <p className="notbold">BUSINESS HOURS</p>
-                    <p className="bold">Mon - Fri: 8:00 AM - 5:00 PM</p>
+                    <p className="bold">
+                      Mon - Fri: 8:00 AM - 5:00 PM
+                    </p>
                   </div>
                 </div>
               </div>
+
               <div className="map-card">
                 <iframe
                   title="Unit 1, 4 Reed Place, Marlmead"
@@ -88,6 +122,7 @@ export function ContactPage() {
           </FadeIn>
         </div>
       </div>
+
       <Footer />
     </>
   );

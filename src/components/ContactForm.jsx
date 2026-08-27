@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./ContactForm.css";
 import { FadeIn } from "./FadeIn";
 
-export function ContactForm() {
+export function ContactForm({ machineId = null, machineTitle = null }) {
   const [status, setStatus] = useState("");
 
   async function handleSubmit(e) {
@@ -16,6 +16,8 @@ export function ContactForm() {
       email: formData.get("email"),
       phone: formData.get("phone"),
       message: formData.get("message"),
+      machineId,
+      machineTitle,
     };
 
     const response = await fetch("/api/contact", {
@@ -39,17 +41,31 @@ export function ContactForm() {
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label>FULL NAME</label>
-          <input name="fullName" type="text" placeholder="John Doe" required />
+          <input
+            name="fullName"
+            type="text"
+            placeholder="John Doe"
+            required
+          />
         </div>
 
         <div className="form-group">
           <label>EMAIL ADDRESS</label>
-          <input name="email" type="email" placeholder="john@example.com" required />
+          <input
+            name="email"
+            type="email"
+            placeholder="john@example.com"
+            required
+          />
         </div>
 
         <div className="form-group">
           <label>PHONE NUMBER</label>
-          <input name="phone" type="tel" placeholder="+27 83 268 4232" />
+          <input
+            name="phone"
+            type="tel"
+            placeholder="+27 83 268 4232"
+          />
         </div>
 
         <div className="form-group">
