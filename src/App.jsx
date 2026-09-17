@@ -15,6 +15,7 @@ import { EditMachine } from "./pages/editMachine/EditMachine";
 import { BevContact } from "./pages/contact/BevContact";
 import Analytics from "./components/Analytics";
 import { NotFound } from "./pages/notFound/NotFound";
+import { HCFengPage } from "./pages/hcfeng/HCFengPage";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="about" element={<AboutPage />} />
         <Route path="machine-listing" element={<MachineListing />} />
         <Route path="tools" element={<ToolsPage />} />
+        <Route path="hcfeng" element={<HCFengPage />} />
         <Route path="contact" element={<ContactPage />} />
         <Route path="bev-contact" element={<BevContact />} />
         <Route path="services" element={<ServicesPage />} />

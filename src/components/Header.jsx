@@ -105,6 +105,19 @@ export function Header() {
             Niche Tooling
           </NavLink>
           <NavLink
+            to="https://tooltempsouthafrica.co.za"
+          >
+            Tool Temp
+          </NavLink>
+          <NavLink
+            to="/hcfeng"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            HC Feng
+          </NavLink>
+          <NavLink
             to="/services"
             className={({ isActive }) =>
               isActive ? "nav-link active" : "nav-link"
@@ -193,6 +206,8 @@ export function Header() {
           </div>
         </div>
         <Link to="/tools">Niche Tooling</Link>
+        <Link to="https://tooltempsouthafrica.co.za">Tool Temp</Link>
+        <Link to="/hcfeng">HC Feng</Link>
         <Link to="/services">Services</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/login">Admin Login</Link>

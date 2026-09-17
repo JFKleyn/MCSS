@@ -1,0 +1,345 @@
+.hcfeng-page {
+  overflow: hidden;
+}
+
+
+/* ================================
+   GLOBAL HC FENG ALIGNMENT
+================================ */
+
+.hcfeng-page p {
+  text-align: left;
+}
+
+.hcfeng-page h2,
+.hcfeng-page h3 {
+  text-align: left;
+}
+
+
+/* ================================
+   PROCESS SECTION
+================================ */
+
+.hcfeng-process {
+  background: #151515;
+
+  padding: 80px 20px;
+}
+
+.hcfeng-process-inner {
+  max-width: 1300px;
+
+  margin: 0 auto;
+}
+
+
+/* Fix eyebrow visibility */
+
+.hcfeng-process .hcfeng-eyebrow {
+  color: #d12126;
+}
+
+
+.hcfeng-process h2 {
+  color: #ffffff;
+
+  max-width: 850px;
+
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.05;
+
+  margin: 0 0 20px;
+}
+
+.hcfeng-process-intro {
+  max-width: 700px;
+
+  color: #a9a9a9;
+
+  line-height: 1.7;
+
+  margin-bottom: 50px;
+
+  text-align: left;
+}
+
+
+/* ================================
+   PROCESS FLOW
+================================ */
+
+.hcfeng-process-flow {
+  display: flex;
+  flex-direction: column;
+}
+
+.process-item {
+  border-top: 1px solid #3c3c3c;
+
+  padding: 25px 0;
+}
+
+.process-item > span {
+  color: #d12126;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.process-item h3 {
+  color: #ffffff;
+
+  font-size: 1.4rem;
+
+  margin: 8px 0;
+
+  text-align: left;
+}
+
+.process-item p {
+  color: #929292;
+
+  line-height: 1.5;
+
+  margin: 0;
+
+  text-align: left;
+}
+
+.process-arrow {
+  display: none;
+}
+
+
+/* ================================
+   BENEFITS SECTION
+================================ */
+
+.hcfeng-benefits {
+  padding: 80px 20px;
+
+  background: #ffffff;
+}
+
+.hcfeng-benefits-header {
+  max-width: 750px;
+
+  margin-bottom: 45px;
+}
+
+.hcfeng-benefits-header h2 {
+  color: #171717;
+
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.05;
+
+  margin: 0;
+}
+
+
+/* ================================
+   BENEFIT CARDS
+================================ */
+
+.hcfeng-benefit-grid {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 20px;
+}
+
+.hcfeng-benefit {
+  background: #f4f4f4;
+
+  border-top: 4px solid #d12126;
+
+  padding: 30px 25px;
+}
+
+.hcfeng-benefit > span {
+  color: #d12126;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.hcfeng-benefit h3 {
+  color: #171717;
+
+  margin: 15px 0 10px;
+
+  text-align: left;
+}
+
+.hcfeng-benefit p {
+  color: #666666;
+
+  line-height: 1.6;
+
+  margin: 0;
+
+  text-align: left;
+}
+
+
+/* ================================
+   FINAL CTA
+================================ */
+
+.hcfeng-final-cta {
+  padding: 80px 20px;
+
+  background: #d12126;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 35px;
+}
+
+.hcfeng-final-cta .hcfeng-eyebrow {
+  color: #ffffff;
+
+  opacity: 0.75;
+}
+
+.hcfeng-final-cta h2 {
+  color: #ffffff;
+
+  max-width: 800px;
+
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.05;
+
+  margin: 0 0 20px;
+}
+
+.hcfeng-final-cta p {
+  color: rgba(255, 255, 255, 0.85);
+
+  max-width: 700px;
+
+  line-height: 1.7;
+
+  margin: 0;
+
+  text-align: left;
+}
+
+.hcfeng-final-cta a {
+  text-decoration: none;
+}
+
+.hcfeng-final-cta button {
+  background: #ffffff;
+
+  color: #171717;
+
+  border-color: #ffffff;
+
+  padding: 20px 30px;
+
+  min-width: 220px;
+}
+
+.hcfeng-final-cta button:hover {
+  background: #171717;
+
+  border-color: #171717;
+
+  color: #ffffff;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (min-width: 780px) {
+  .hcfeng-benefit-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ================================
+   DESKTOP
+================================ */
+
+@media (min-width: 1024px) {
+  .hcfeng-process,
+  .hcfeng-benefits {
+    padding: 120px 7%;
+  }
+
+
+  /* PROCESS FLOW */
+
+  .hcfeng-process-flow {
+    flex-direction: row;
+
+    align-items: stretch;
+  }
+
+  .process-item {
+    flex: 1;
+
+    padding: 30px 20px;
+
+    border-top: 2px solid #333333;
+  }
+
+  .process-item:first-child {
+    padding-left: 0;
+  }
+
+  .process-item:last-child {
+    padding-right: 0;
+  }
+
+  .process-arrow {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #d12126;
+
+    font-size: 1.5rem;
+
+    padding: 0 5px;
+  }
+
+
+  /* BENEFITS */
+
+  .hcfeng-benefit {
+    padding: 35px 30px;
+
+    min-height: 220px;
+  }
+
+
+  /* FINAL CTA */
+
+  .hcfeng-final-cta {
+    padding: 100px 7%;
+
+    flex-direction: row;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 80px;
+  }
+
+  .hcfeng-final-cta > div {
+    flex: 1;
+  }
+
+  .hcfeng-final-cta button {
+    margin-bottom: 5px;
+  }
+}
