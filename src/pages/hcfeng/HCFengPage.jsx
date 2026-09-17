@@ -3,6 +3,7 @@ import { Footer } from "../../components/Footer";
 import { HCFengHero } from "./HCFengHero";
 import { HCFengProducts } from "./HCFengProducts.jsx";
 import "./HCFengPage.css";
+import { Footer4 } from "./Footer4.jsx";
 
 export function HCFengPage() {
   return (
@@ -139,27 +140,7 @@ export function HCFengPage() {
           </div>
         </section>
 
-        <section className="hcfeng-final-cta">
-          <div>
-            <span className="hcfeng-eyebrow">
-              NEED HELP CHOOSING?
-            </span>
-
-            <h2>
-              FIND THE RIGHT COOLANT SOLUTION FOR YOUR OPERATION.
-            </h2>
-
-            <p>
-              Speak to the MCSS team about your machines, coolant system
-              and current challenges. We'll help identify the HC FENG
-              solution suited to your application.
-            </p>
-          </div>
-
-          <a href="/contact">
-            <button>CONTACT MCSS</button>
-          </a>
-        </section>
+        <Footer4 />
       </main>
 
       <Footer />
