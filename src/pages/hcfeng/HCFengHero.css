@@ -1,0 +1,121 @@
+.hcfeng-hero {
+  min-height: 82vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 120px 20px 60px;
+  overflow: hidden;
+}
+
+.hcfeng-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(8, 8, 8, 0.96) 0%,
+    rgba(8, 8, 8, 0.82) 42%,
+    rgba(8, 8, 8, 0.25) 100%
+  );
+}
+
+.hcfeng-hero > *:not(.hcfeng-hero-overlay) {
+  position: relative;
+  z-index: 2;
+}
+
+.hcfeng-hero-content {
+  width: 100%;
+  max-width: 760px;
+}
+
+.hcfeng-hero-content > span {
+  display: block;
+  color: #d12126;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.hcfeng-hero-content h1 {
+  color: #ffffff;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.95;
+  margin: 0 0 25px;
+  text-align: left;
+}
+
+.hcfeng-hero-content h1 strong {
+  display: inline-block;
+  font-weight: inherit;
+  color: #d12126;
+}
+
+.hcfeng-hero-content p {
+  color: #d4d4d4;
+  max-width: 600px;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.7;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.hcfeng-hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hcfeng-hero-buttons a {
+  text-decoration: none;
+}
+
+.hcfeng-hero-buttons button {
+  width: 100%;
+  padding: 18px 25px;
+}
+
+.hcfeng-outline-button {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+
+.hcfeng-outline-button:hover {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (min-width: 780px) {
+  .hcfeng-hero {
+    padding: 140px 7% 80px;
+  }
+
+  .hcfeng-hero-buttons {
+    flex-direction: row;
+  }
+
+  .hcfeng-hero-buttons button {
+    width: auto;
+    min-width: 210px;
+  }
+}
+
+
+/* ================================
+   DESKTOP
+================================ */
+
+@media (min-width: 1024px) {
+  .hcfeng-hero {
+    min-height: 80vh;
+  }
+}
