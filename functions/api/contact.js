@@ -1,92 +1,269 @@
+import { connect } from "cloudflare:sockets";
+
 export async function onRequestPost(context) {
   const { request, env } = context;
 
-  try {
-    const {
-      fullName,
-      email,
-      phone,
-      message,
-      machineId,
-      machineTitle,
-    } = await request.json();
+  let socket;
+  let writer;
+  let reader;
 
-    if (!env.RESEND_API_KEY || !env.FROM_EMAIL || !env.TO_EMAIL) {
-      return Response.json(
-        { error: "Email environment variables are missing." },
-        { status: 500 }
+  try {
+    // ─────────────────────────────────────────────
+    // Read form submission
+    // ─────────────────────────────────────────────
+    const body = await request.json();
+
+    const fullName = body.fullName?.trim();
+    const email = body.email?.trim();
+    const phone = body.phone?.trim();
+    const message = body.message?.trim();
+    const machineId = body.machineId;
+    const machineTitle = body.machineTitle?.trim();
+
+    if (!fullName || !email || !message) {
+      return json(
+        {
+          success: false,
+          error: "Please complete all required fields.",
+        },
+        400,
       );
     }
 
+    // Basic email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+      return json(
+        {
+          success: false,
+          error: "Please enter a valid email address.",
+        },
+        400,
+      );
+    }
+
+    // Prevent header injection
+    if (/[\r\n]/.test(email)) {
+      return json(
+        {
+          success: false,
+          error: "Invalid email address.",
+        },
+        400,
+      );
+    }
+
+    // Determine whether this came from a machine enquiry
     const isMachineEnquiry = Boolean(machineId && machineTitle);
 
-    const subject = isMachineEnquiry
-      ? `Machine Enquiry: ${machineTitle}`
-      : `New MCSS website enquiry from ${fullName}`;
+    // ─────────────────────────────────────────────
+    // Connect to Venture / Xneelo SMTP
+    // ─────────────────────────────────────────────
+    socket = connect(
+      {
+        hostname: env.SMTP_HOST,
+        port: 465,
+      },
+      {
+        secureTransport: "on",
+      },
+    );
 
-    const machineDetails = isMachineEnquiry
-      ? `
-          <hr>
+    writer = socket.writable.getWriter();
+    reader = socket.readable.getReader();
 
-          <h3>Machine Enquiry Details</h3>
+    const encoder = new TextEncoder();
+    const decoder = new TextDecoder();
 
-          <p><strong>Machine:</strong> ${machineTitle}</p>
-        `
+    async function readResponse() {
+      let response = "";
+
+      while (true) {
+        const { value, done } = await reader.read();
+
+        if (done) break;
+
+        response += decoder.decode(value, { stream: true });
+
+        const lines = response.split("\r\n").filter(Boolean);
+        const lastLine = lines[lines.length - 1];
+
+        if (lastLine && /^\d{3} /.test(lastLine)) {
+          break;
+        }
+      }
+
+      return response;
+    }
+
+    async function send(command) {
+      await writer.write(
+        encoder.encode(command + "\r\n"),
+      );
+
+      return await readResponse();
+    }
+
+    function expect(response, codes) {
+      const code = Number(response.slice(0, 3));
+
+      if (!codes.includes(code)) {
+        throw new Error(`SMTP error: ${response}`);
+      }
+    }
+
+    // ─────────────────────────────────────────────
+    // SMTP authentication
+    // ─────────────────────────────────────────────
+    let response = await readResponse();
+    expect(response, [220]);
+
+    response = await send("EHLO venturetechnologies.co");
+    expect(response, [250]);
+
+    response = await send("AUTH LOGIN");
+    expect(response, [334]);
+
+    response = await send(btoa(env.SMTP_USER));
+    expect(response, [334]);
+
+    response = await send(btoa(env.SMTP_PASSWORD));
+    expect(response, [235]);
+
+    // ─────────────────────────────────────────────
+    // Addressing
+    // ─────────────────────────────────────────────
+    response = await send(
+      `MAIL FROM:<${env.SMTP_USER}>`,
+    );
+    expect(response, [250]);
+
+    // TESTING — Johan receives main enquiry
+    response = await send(
+      "RCPT TO:<johan@venturetechnologies.co>",
+    );
+    expect(response, [250, 251]);
+
+    // Venture archive / invisible BCC
+    response = await send(
+      "RCPT TO:<johan@venturetechnologies.co>",
+    );
+    expect(response, [250, 251]);
+
+    response = await send("DATA");
+    expect(response, [354]);
+
+    // ─────────────────────────────────────────────
+    // Build email
+    // ─────────────────────────────────────────────
+    const safeName = cleanHeader(fullName);
+    const safeEmail = cleanHeader(email);
+    const safeMachineTitle = machineTitle
+      ? cleanHeader(machineTitle)
       : "";
 
-    const resendResponse = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${env.RESEND_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: env.FROM_EMAIL,
-        to: [env.TO_EMAIL],
-        reply_to: email,
-        subject,
-        html: `
-          <h2>
-            ${
-              isMachineEnquiry
-                ? "New MCSS Machine Enquiry"
-                : "New MCSS Website Enquiry"
-            }
-          </h2>
+    const subject = isMachineEnquiry
+      ? `MCSS Machine Enquiry - ${safeMachineTitle}`
+      : `New MCSS Website Enquiry - ${safeName}`;
 
-          ${machineDetails}
+    const emailLines = [
+      `From: MCSS Website <${env.SMTP_USER}>`,
+      `To: Johan <johan@venturetechnologies.co>`,
+      `Reply-To: ${safeName} <${safeEmail}>`,
+      `Subject: ${subject}`,
+      "MIME-Version: 1.0",
+      'Content-Type: text/plain; charset="UTF-8"',
+      "",
+      isMachineEnquiry
+        ? "NEW MCSS MACHINE ENQUIRY"
+        : "NEW MCSS WEBSITE ENQUIRY",
+      "========================================",
+      "",
+    ];
 
-          <hr>
-
-          <h3>Customer Details</h3>
-
-          <p><strong>Name:</strong> ${fullName}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
-
-          <p><strong>Message:</strong></p>
-          <p>${message}</p>
-        `,
-      }),
-    });
-
-    if (!resendResponse.ok) {
-      const error = await resendResponse.json();
-
-      return Response.json(
-        { error: "Failed to send email.", details: error },
-        { status: 500 }
+    if (isMachineEnquiry) {
+      emailLines.push(
+        "MACHINE DETAILS",
+        "----------------------------------------",
+        `Machine: ${machineTitle}`,
+        `Machine ID: ${machineId}`,
+        "",
       );
     }
 
-    return Response.json({
+    emailLines.push(
+      "CUSTOMER DETAILS",
+      "----------------------------------------",
+      `Name: ${fullName}`,
+      `Email: ${email}`,
+      `Phone: ${phone || "Not provided"}`,
+      "",
+      "MESSAGE",
+      "----------------------------------------",
+      message,
+      "",
+      "========================================",
+      "Sent via the MCSS website",
+      "Email delivery powered by Venture Technologies",
+    );
+
+    const emailBody = emailLines.join("\r\n");
+
+    // SMTP dot-stuffing
+    const smtpSafeBody = emailBody.replace(/^\./gm, "..");
+
+    await writer.write(
+      encoder.encode(smtpSafeBody + "\r\n.\r\n"),
+    );
+
+    response = await readResponse();
+    expect(response, [250]);
+
+    await writer.write(
+      encoder.encode("QUIT\r\n"),
+    );
+
+    try {
+      await writer.close();
+    } catch {
+      // SMTP transaction already completed successfully.
+    }
+
+    return json({
       success: true,
       message: "Sent successfully.",
     });
-  } catch {
-    return Response.json(
-      { error: "Something went wrong while sending." },
-      { status: 500 }
+  } catch (error) {
+    console.error("MCSS CONTACT FORM SMTP ERROR:", error);
+
+    try {
+      if (writer) await writer.close();
+    } catch {
+      // Ignore cleanup errors.
+    }
+
+    return json(
+      {
+        success: false,
+        error: "Something went wrong while sending.",
+      },
+      500,
     );
   }
+}
+
+function cleanHeader(value) {
+  return String(value)
+    .replace(/[\r\n]/g, " ")
+    .trim();
+}
+
+function json(data, status = 200) {
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 }
